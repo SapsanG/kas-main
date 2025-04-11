@@ -828,3 +828,35 @@ task: <Task pending name='Task-14' coro=<start_trading() running at C:\Users\Sto
 2025-04-11 11:13:34,148 - config.logging_config - INFO - Полный ответ fetch_balance() для пользователя 810668767: {'info': {'makerCommission': None, 'takerCommission': None, 'buyerCommission': None, 'sellerCommission': None, 'canTrade': True, 'canWithdraw': True, 'canDeposit': True, 'updateTime': None, 'accountType': 'SPOT', 'balances': [{'asset': 'USDT', 'free': '20.19437465', 'locked': '0'}, {'asset': 'KAS', 'free': '158.57', 'locked': '134.03'}], 'permissions': ['SPOT']}, 'USDT': {'free': 20.19437465, 'used': 0.0, 'total': 20.19437465}, 'KAS': {'free': 158.57, 'used': 134.03, 'total': 292.6}, 'free': {'USDT': 20.19437465, 'KAS': 158.57}, 'used': {'USDT': 0.0, 'KAS': 134.03}, 'total': {'USDT': 20.19437465, 'KAS': 292.6}}
 2025-04-11 11:20:15,772 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
 2025-04-11 11:20:15,772 - telegram.ext.Application - INFO - Application.stop() complete
+2025-04-11 11:35:05,984 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-04-11 11:35:05,984 - config.logging_config - INFO - Бот успешно запущен!
+2025-04-11 11:35:07,596 - telegram.ext.Application - INFO - Application started
+2025-04-11 11:35:29,592 - config.logging_config - INFO - Команда /check_api_keys вызвана пользователем 810668767
+2025-04-11 11:35:29,622 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-04-11 11:35:29,623 - config.logging_config - INFO - Параметры успешно загружены для пользователя 810668767.
+2025-04-11 11:35:29,623 - config.logging_config - WARNING - API-ключи не найдены для пользователя 810668767.
+2025-04-11 11:35:39,643 - config.logging_config - INFO - Команда /start вызвана пользователем 810668767
+2025-04-11 11:35:52,301 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-04-11 11:35:52,312 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-04-11 11:35:52,312 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 810668767.
+2025-04-11 11:36:10,899 - config.logging_config - INFO - Команда /set_params вызвана пользователем 810668767
+2025-04-11 11:36:31,546 - config.logging_config - INFO - Команда /set_params вызвана пользователем 810668767
+2025-04-11 11:36:31,552 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-04-11 11:36:31,552 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-04-11 11:36:54,612 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 810668767
+2025-04-11 11:36:54,613 - app.trading_logic - INFO - ========== НАЧАЛО АВТОТОРГОВЛИ ==========
+2025-04-11 11:36:54,613 - app.trading_logic - INFO - Автоторговля запущена для пользователя 810668767, символ KAS/USDT
+2025-04-11 11:36:54,855 - app.trading_logic - WARNING - Сброс предыдущей сессии для пользователя 810668767
+2025-04-11 11:36:54,948 - app.trading_logic - INFO - Контекст пользователя 810668767 загружен
+2025-04-11 11:36:55,059 - app.trading_logic - INFO - Параметры торговли для 810668767:
+2025-04-11 11:36:55,059 - app.trading_logic - INFO - - Прибыль: 0.5%
+2025-04-11 11:36:55,060 - app.trading_logic - INFO - - Падение: 0.5%
+2025-04-11 11:36:55,060 - app.trading_logic - INFO - - Задержка: 60с
+2025-04-11 11:36:55,060 - app.trading_logic - INFO - - Размер ордера: 4.0 USDT
+2025-04-11 11:36:59,785 - app.trading_logic - INFO - Баланс USDT: 20.19437465
+2025-04-11 11:37:00,426 - app.trading_logic - INFO - Покупка Buy1: 53.94 по 0.077857
+2025-04-11 11:49:41,195 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-04-11 11:49:41,196 - telegram.ext.Application - INFO - Application.stop() complete
+2025-04-11 11:49:41,317 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-34' coro=<start_trading() running at C:\Users\Глеб\Desktop\KAS\kas-main\app\trading_logic.py:122> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-04-11 11:49:41,319 - app.trading_logic - INFO - ========== КОНЕЦ АВТОТОРГОВЛИ ==========
