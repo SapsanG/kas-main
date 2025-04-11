@@ -1,10 +1,9 @@
-# trading_logic.py
-
 import asyncio
 import logging
-import math
-import traceback
+import json
+from pathlib import Path
 import time
+import traceback
 from app.shared import bot_state_manager, get_user_context
 from telegram import Update
 import ccxt
@@ -12,108 +11,151 @@ import ccxt
 # Настройка логирования
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    level=logging.INFO
+    level=logging.INFO,
+    handlers=[
+        logging.FileHandler("trading_bot.log"),
+        logging.StreamHandler()
+    ]
 )
 logger = logging.getLogger(__name__)
+
+async def notify_sell_order_filled(update, order_id, profit):
+    await update.message.reply_text(
+        f"🎉 Ордер {order_id} исполнен! Прибыль: +{profit:.2f} USDT"
+    )
+
+def save_state(user_id, buy_levels, sell_orders):
+    state = {
+        'buy_levels': buy_levels,
+        'sell_orders': [o['id'] for o in sell_orders],
+    }
+    with open(f"state_{user_id}.json", "w") as f:
+        json.dump(state, f)
+
+def load_state(user_id):
+    try:
+        with open(f"state_{user_id}.json", "r") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {'buy_levels': [], 'sell_orders': []}
+
+async def safe_api_call(api_function, *args, retries=3, delay=5):
+    for attempt in range(retries):
+        try:
+            return api_function(*args)
+        except ccxt.NetworkError as e:
+            logger.error(f"Сетевая ошибка (попытка {attempt + 1}/{retries}): {e}")
+            await asyncio.sleep(delay)
+        except Exception as e:
+            logger.error(f"Ошибка API: {e}")
+            raise
+    raise Exception("Превышено количество попыток")
+
+async def reset_state(update: Update) -> None:
+    user_id = update.effective_user.id
+    state_file = Path(f"state_{user_id}.json")
+    if state_file.exists():
+        state_file.unlink()
+        logger.info(f"Состояние пользователя {user_id} сброшено.")
+        await update.message.reply_text("✅ Состояние сброшено. Все уровни покупок удалены.")
+    else:
+        await update.message.reply_text("⚠️ Нет сохраненного состояния для сброса.")
 
 async def start_trading(symbol: str, update: Update) -> None:
     user_id = update.effective_user.id
     logger.info(f"========== НАЧАЛО АВТОТОРГОВЛИ ==========")
-    logger.info(f"Автоторговля запущена для пользователя {user_id}, символ {symbol}")
     
-    # Сброс предыдущего состояния
-    await update.message.reply_text(f"🔄 Запускаю автоторговлю для {symbol}...")
+    # Сброс предыдущей сессии
     if bot_state_manager.is_trading_active(user_id):
         logger.warning(f"Сброс предыдущей сессии для пользователя {user_id}")
         bot_state_manager.stop(user_id)
         await update.message.reply_text('Предыдущая сессия сброшена.')
 
+    # Очистка файла состояния
+    state_file = Path(f"state_{user_id}.json")
+    if state_file.exists():
+        state_file.unlink()
+        logger.info("Файл состояния удален.")
+
+    # Загрузка состояния
+    state = load_state(user_id)
+    buy_levels = state.get('buy_levels', [])
+    sell_orders = [{'id': oid} for oid in state.get('sell_orders', [])]
+    
     try:
         user_context = get_user_context(user_id)
-        logger.info(f"Контекст пользователя {user_id} загружен")
-        await update.message.reply_text("✅ Контекст загружен")
-    except Exception as e:
-        logger.error(f"Ошибка контекста: {e}")
-        await update.message.reply_text(f"❌ Ошибка контекста: {str(e)}")
-        return
-
-    bot_state_manager.start(user_id)
-    logger.info(f"Параметры торговли для {user_id}:")
-    logger.info(f"- Прибыль: {user_context.bot_params.profit_percentage}%")
-    logger.info(f"- Падение: {user_context.bot_params.fall_percentage}%")
-    logger.info(f"- Задержка: {user_context.bot_params.delay_seconds}с")
-    logger.info(f"- Размер ордера: {user_context.bot_params.order_size} USDT")
-    
-    await update.message.reply_text(
-        f"📊 Параметры:\n"
-        f"- Прибыль: {user_context.bot_params.profit_percentage}%\n"
-        f"- Падение: {user_context.bot_params.fall_percentage}%\n"
-        f"- Задержка: {user_context.bot_params.delay_seconds}с\n"
-        f"- Размер: {user_context.bot_params.order_size} USDT"
-    )
-
-    try:
         mexc = user_context.get_mexc_instance()
-        await update.message.reply_text("✅ Подключено к MEXC")
-
-        balance = mexc.fetch_balance()
-        usdt_balance = balance['USDT']['free']
-        logger.info(f"Баланс USDT: {usdt_balance}")
-        await update.message.reply_text(f"💰 Баланс: {usdt_balance} USDT")
         
+        # Проверка баланса
+        balance = await safe_api_call(mexc.fetch_balance)
+        usdt_balance = balance['USDT']['free']
         if usdt_balance < user_context.bot_params.order_size:
-            await update.message.reply_text("❌ Недостаточно средств")
-            bot_state_manager.stop(user_id)
-            return
+            raise Exception("Недостаточно средств")
 
-        mexc.load_markets()
-        if symbol not in mexc.markets:
-            await update.message.reply_text(f"❌ Пара {symbol} не найдена")
-            bot_state_manager.stop(user_id)
-            return
-
-        market = mexc.markets[symbol]
+        market = await safe_api_call(mexc.market, symbol)
         price_precision = market['precision']['price']
         amount_precision = market['precision']['amount']
 
-        last_buy_time = 0
-        last_buy_price = 0
-        buy_levels = []
-        sell_orders = []
+        last_buy_time = time.time() if buy_levels else 0
+        last_buy_price = buy_levels[-1]['price'] if buy_levels else 0
+
+        bot_state_manager.start(user_id)
+        if not buy_levels:
+            await update.message.reply_text("🔄 Торговая сессия начата. Начальных уровней покупки нет.")
+        else:
+            await update.message.reply_text(f"🔄 Торговая сессия начата. Загружено {len(buy_levels)} уровней покупки.")
 
         while bot_state_manager.is_trading_active(user_id):
             try:
-                ticker = mexc.fetch_ticker(symbol)
-                current_bid = float(ticker['bid'])  # Лучшая цена покупателей
-                current_ask = float(ticker['ask'])  # Лучшая цена продавцов
-                current_last = float(ticker['last'])  # Последняя цена сделки
-                
-                logger.info(f"Цены: Last={current_last}, BID={current_bid}, ASK={current_ask}")
+                ticker = await safe_api_call(mexc.fetch_ticker, symbol)
+                current_bid = float(ticker['bid'])
+                current_ask = float(ticker['ask'])
+                current_last = float(ticker['last'])
 
-                # Первая покупка
+                # Проверка исполненных ордеров
+                open_orders = await safe_api_call(mexc.fetch_open_orders, symbol)
+                active_order_ids = {o['id'] for o in open_orders}
+                
+                # Проверка ордеров на продажу
+                for order in sell_orders.copy():
+                    if order['id'] not in active_order_ids:
+                        sell_orders.remove(order)
+                        await notify_sell_order_filled(update, order['id'], order.get('profit', 0))
+                        save_state(user_id, buy_levels, sell_orders)
+
+                # Основная логика покупок
                 if not buy_levels:
+                    # Первая покупка
+                    logger.info("Начальная покупка...")
                     amount = user_context.bot_params.order_size / current_ask
                     amount = max(amount, market['limits']['amount']['min'])
                     amount = mexc.amount_to_precision(symbol, amount)
+                    amount = float(amount)
                     
-                    buy_order = mexc.create_market_buy_order(symbol, amount)
+                    buy_order = await safe_api_call(mexc.create_market_buy_order, symbol, amount)
                     actual_amount = float(buy_order['amount'])
-                    buy_price = current_ask  # Фактическая цена покупки
+                    buy_price = current_ask
                     
                     sell_price = current_bid * (1 + user_context.bot_params.profit_percentage / 100)
                     sell_price = mexc.price_to_precision(symbol, sell_price)
+                    sell_price = float(sell_price)
                     
-                    sell_order = mexc.create_limit_sell_order(symbol, actual_amount, sell_price)
-                    profit = (float(sell_price) - buy_price) * actual_amount
+                    sell_order = await safe_api_call(
+                        mexc.create_limit_sell_order,
+                        symbol,
+                        actual_amount,
+                        sell_price
+                    )
+                    profit = (sell_price - buy_price) * actual_amount
                     
                     buy_levels.append({'price': buy_price, 'amount': actual_amount})
                     sell_orders.append({'id': sell_order['id'], 'profit': profit})
-                    
                     last_buy_time = time.time()
                     last_buy_price = buy_price
                     
+                    save_state(user_id, buy_levels, sell_orders)
                     await update.message.reply_text(
-                        f"✅ Покупка Buy1:\n"
+                        f"✅ Первая покупка Buy1:\n"
                         f"- Цена: {buy_price:.6f}\n"
                         f"- Количество: {actual_amount:.6f}\n"
                         f"- Стоимость: {actual_amount * buy_price:.2f} USDT"
@@ -123,61 +165,58 @@ async def start_trading(symbol: str, update: Update) -> None:
                         f"- Цена: {sell_price:.6f}\n"
                         f"- Ожидаемая прибыль: {profit:.2f} USDT"
                     )
-                    continue
+                    continue  # Пропуск основного цикла после первой покупки
 
-                # Проверка условий для следующей покупки
+                # Проверка условий для последующих покупок
+                last_buy = buy_levels[-1]
                 time_condition = (time.time() - last_buy_time) >= user_context.bot_params.delay_seconds
-                price_condition = current_last <= last_buy_price * (1 - user_context.bot_params.fall_percentage / 100)
+                price_condition = current_last <= last_buy['price'] * (1 - user_context.bot_params.fall_percentage / 100)
                 
-                if not (time_condition and price_condition):
-                    logger.info(f"Условия для покупки не выполнены. Текущая цена: {current_last}, "
-                                f"Необходимое падение: {last_buy_price * (1 - user_context.bot_params.fall_percentage / 100):.6f}")
-                    await asyncio.sleep(10)
-                    continue
+                if time_condition and price_condition:
+                    has_open_buy = any(o['side'] == 'buy' for o in open_orders)
+                    if has_open_buy:
+                        logger.info("Есть открытые ордера на покупку. Ожидание...")
+                        await asyncio.sleep(10)
+                        continue
 
-                # Выполняем покупку
-                amount = user_context.bot_params.order_size / current_ask
-                amount = max(amount, market['limits']['amount']['min'])
-                amount = mexc.amount_to_precision(symbol, amount)
-                
-                buy_order = mexc.create_market_buy_order(symbol, amount)
-                actual_amount = float(buy_order['amount'])
-                buy_price = current_ask  # Фактическая цена покупки
-                
-                sell_price = current_bid * (1 + user_context.bot_params.profit_percentage / 100)
-                sell_price = mexc.price_to_precision(symbol, sell_price)
-                
-                sell_order = mexc.create_limit_sell_order(symbol, actual_amount, sell_price)
-                profit = (float(sell_price) - buy_price) * actual_amount
-                
-                buy_levels.append({'price': buy_price, 'amount': actual_amount})
-                sell_orders.append({'id': sell_order['id'], 'profit': profit})
-                
-                last_buy_time = time.time()
-                last_buy_price = buy_price
-                
-                await update.message.reply_text(
-                    f"✅ Покупка Buy{len(buy_levels)}:\n"
-                    f"- Цена: {buy_price:.6f}\n"
-                    f"- Количество: {actual_amount:.6f}\n"
-                    f"- Стоимость: {actual_amount * buy_price:.2f} USDT"
-                )
-                await update.message.reply_text(
-                    f"🔄 Ордер на продажу:\n"
-                    f"- Цена: {sell_price:.6f}\n"
-                    f"- Ожидаемая прибыль: {profit:.2f} USDT"
-                )
-
-                # Проверка статуса ордеров
-                open_orders = mexc.fetch_open_orders(symbol)
-                active_order_ids = {o['id'] for o in open_orders}
-                
-                for order in sell_orders.copy():
-                    if order['id'] not in active_order_ids:
-                        sell_orders.remove(order)
-                        await update.message.reply_text(
-                            f"🎉 Ордер {order['id']} исполнен! Прибыль: {order['profit']:.2f} USDT"
-                        )
+                    amount = user_context.bot_params.order_size / current_ask
+                    amount = max(amount, market['limits']['amount']['min'])
+                    amount = mexc.amount_to_precision(symbol, amount)
+                    amount = float(amount)
+                    
+                    buy_order = await safe_api_call(mexc.create_market_buy_order, symbol, amount)
+                    actual_amount = float(buy_order['amount'])
+                    buy_price = current_ask
+                    
+                    sell_price = current_bid * (1 + user_context.bot_params.profit_percentage / 100)
+                    sell_price = mexc.price_to_precision(symbol, sell_price)
+                    sell_price = float(sell_price)
+                    
+                    sell_order = await safe_api_call(
+                        mexc.create_limit_sell_order,
+                        symbol,
+                        actual_amount,
+                        sell_price
+                    )
+                    profit = (sell_price - buy_price) * actual_amount
+                    
+                    buy_levels.append({'price': buy_price, 'amount': actual_amount})
+                    sell_orders.append({'id': sell_order['id'], 'profit': profit})
+                    last_buy_time = time.time()
+                    last_buy_price = buy_price
+                    
+                    save_state(user_id, buy_levels, sell_orders)
+                    await update.message.reply_text(
+                        f"✅ Покупка Buy{len(buy_levels)}:\n"
+                        f"- Цена: {buy_price:.6f}\n"
+                        f"- Количество: {actual_amount:.6f}\n"
+                        f"- Стоимость: {actual_amount * buy_price:.2f} USDT"
+                    )
+                    await update.message.reply_text(
+                        f"🔄 Ордер на продажу:\n"
+                        f"- Цена: {sell_price:.6f}\n"
+                        f"- Ожидаемая прибыль: {profit:.2f} USDT"
+                    )
 
                 await asyncio.sleep(10)
 
@@ -185,12 +224,14 @@ async def start_trading(symbol: str, update: Update) -> None:
                 logger.error(f"Сетевая ошибка: {e}")
                 await asyncio.sleep(30)
             except Exception as e:
-                logger.error(f"Ошибка цикла: {e}")
-                await asyncio.sleep(10)
+                logger.error(f"Ошибка цикла: {traceback.format_exc()}")
+                await update.message.reply_text(f"❌ Ошибка: {str(e)}")
+                await asyncio.sleep(30)
 
     except Exception as e:
-        logger.error(f"Критическая ошибка: {e}")
+        logger.error(f"Критическая ошибка: {traceback.format_exc()}")
         await update.message.reply_text(f"❌ Критическая ошибка: {str(e)}")
     finally:
         bot_state_manager.stop(user_id)
+        save_state(user_id, buy_levels, sell_orders)
         logger.info(f"========== КОНЕЦ АВТОТОРГОВЛИ ==========")
