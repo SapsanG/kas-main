@@ -3,10 +3,11 @@
 import asyncio
 import logging
 import math
+import traceback
+import time
 from app.shared import bot_state_manager, get_user_context
 from telegram import Update
 import ccxt
-import time
 
 # Настройка логирования
 logging.basicConfig(
@@ -96,10 +97,9 @@ async def start_trading(symbol: str, update: Update) -> None:
                     amount = mexc.amount_to_precision(symbol, amount)
                     
                     buy_order = mexc.create_market_buy_order(symbol, amount)
-                    buy_price = float(buy_order['price'])
                     actual_amount = float(buy_order['amount'])
+                    buy_price = current_ask  # Фактическая цена покупки
                     
-                    # Цена продажи рассчитывается от цены покупки через BID
                     sell_price = current_bid * (1 + user_context.bot_params.profit_percentage / 100)
                     sell_price = mexc.price_to_precision(symbol, sell_price)
                     
@@ -114,13 +114,13 @@ async def start_trading(symbol: str, update: Update) -> None:
                     
                     await update.message.reply_text(
                         f"✅ Покупка Buy1:\n"
-                        f"- Цена: {buy_price}\n"
-                        f"- Количество: {actual_amount}\n"
+                        f"- Цена: {buy_price:.6f}\n"
+                        f"- Количество: {actual_amount:.6f}\n"
                         f"- Стоимость: {actual_amount * buy_price:.2f} USDT"
                     )
                     await update.message.reply_text(
                         f"🔄 Ордер на продажу:\n"
-                        f"- Цена: {sell_price}\n"
+                        f"- Цена: {sell_price:.6f}\n"
                         f"- Ожидаемая прибыль: {profit:.2f} USDT"
                     )
                     continue
@@ -129,38 +129,44 @@ async def start_trading(symbol: str, update: Update) -> None:
                 time_condition = (time.time() - last_buy_time) >= user_context.bot_params.delay_seconds
                 price_condition = current_last <= last_buy_price * (1 - user_context.bot_params.fall_percentage / 100)
                 
-                if time_condition and price_condition:
-                    amount = user_context.bot_params.order_size / current_ask
-                    amount = max(amount, market['limits']['amount']['min'])
-                    amount = mexc.amount_to_precision(symbol, amount)
-                    
-                    buy_order = mexc.create_market_buy_order(symbol, amount)
-                    buy_price = float(buy_order['price'])
-                    actual_amount = float(buy_order['amount'])
-                    
-                    sell_price = current_bid * (1 + user_context.bot_params.profit_percentage / 100)
-                    sell_price = mexc.price_to_precision(symbol, sell_price)
-                    
-                    sell_order = mexc.create_limit_sell_order(symbol, actual_amount, sell_price)
-                    profit = (float(sell_price) - buy_price) * actual_amount
-                    
-                    buy_levels.append({'price': buy_price, 'amount': actual_amount})
-                    sell_orders.append({'id': sell_order['id'], 'profit': profit})
-                    
-                    last_buy_time = time.time()
-                    last_buy_price = buy_price
-                    
-                    await update.message.reply_text(
-                        f"✅ Покупка Buy{len(buy_levels)}:\n"
-                        f"- Цена: {buy_price}\n"
-                        f"- Количество: {actual_amount}\n"
-                        f"- Стоимость: {actual_amount * buy_price:.2f} USDT"
-                    )
-                    await update.message.reply_text(
-                        f"🔄 Ордер на продажу:\n"
-                        f"- Цена: {sell_price}\n"
-                        f"- Ожидаемая прибыль: {profit:.2f} USDT"
-                    )
+                if not (time_condition and price_condition):
+                    logger.info(f"Условия для покупки не выполнены. Текущая цена: {current_last}, "
+                                f"Необходимое падение: {last_buy_price * (1 - user_context.bot_params.fall_percentage / 100):.6f}")
+                    await asyncio.sleep(10)
+                    continue
+
+                # Выполняем покупку
+                amount = user_context.bot_params.order_size / current_ask
+                amount = max(amount, market['limits']['amount']['min'])
+                amount = mexc.amount_to_precision(symbol, amount)
+                
+                buy_order = mexc.create_market_buy_order(symbol, amount)
+                actual_amount = float(buy_order['amount'])
+                buy_price = current_ask  # Фактическая цена покупки
+                
+                sell_price = current_bid * (1 + user_context.bot_params.profit_percentage / 100)
+                sell_price = mexc.price_to_precision(symbol, sell_price)
+                
+                sell_order = mexc.create_limit_sell_order(symbol, actual_amount, sell_price)
+                profit = (float(sell_price) - buy_price) * actual_amount
+                
+                buy_levels.append({'price': buy_price, 'amount': actual_amount})
+                sell_orders.append({'id': sell_order['id'], 'profit': profit})
+                
+                last_buy_time = time.time()
+                last_buy_price = buy_price
+                
+                await update.message.reply_text(
+                    f"✅ Покупка Buy{len(buy_levels)}:\n"
+                    f"- Цена: {buy_price:.6f}\n"
+                    f"- Количество: {actual_amount:.6f}\n"
+                    f"- Стоимость: {actual_amount * buy_price:.2f} USDT"
+                )
+                await update.message.reply_text(
+                    f"🔄 Ордер на продажу:\n"
+                    f"- Цена: {sell_price:.6f}\n"
+                    f"- Ожидаемая прибыль: {profit:.2f} USDT"
+                )
 
                 # Проверка статуса ордеров
                 open_orders = mexc.fetch_open_orders(symbol)
