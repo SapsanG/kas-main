@@ -1,0 +1,791 @@
+2025-02-26 10:37:56,413 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 10:37:56,417 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 10:38:01,868 - telegram.ext.Application - INFO - Application started
+2025-02-26 10:38:06,086 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 744, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 4480, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 619, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 648, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\request\_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\request\_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-02-26 10:38:11,767 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 744, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 4480, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 619, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 648, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\request\_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\request\_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-02-26 10:38:18,674 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 744, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 4480, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 619, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 648, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\request\_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\request\_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-02-26 10:38:24,446 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 744, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 4480, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 619, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 648, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\request\_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\request\_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-02-26 10:38:33,124 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 744, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 4480, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 619, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 648, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\request\_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\request\_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-02-26 10:38:46,115 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 744, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 4480, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 619, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 648, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\request\_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\request\_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-02-26 10:39:05,441 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 744, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 4480, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 619, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 648, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\request\_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\request\_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-02-26 10:39:26,742 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 744, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 4480, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 619, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 648, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\request\_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\request\_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-02-26 10:39:56,625 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 744, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 4480, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 619, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 648, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\request\_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\request\_baserequest.py", line 385, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-02-26 10:40:47,151 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 10:40:47,153 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 10:40:51,842 - telegram.ext.Application - INFO - Application started
+2025-02-26 10:41:08,342 - config.logging_config - INFO - Команда /start вызвана пользователем 810668767
+2025-02-26 10:41:16,185 - config.logging_config - INFO - Команда /check_api_keys вызвана пользователем 810668767
+2025-02-26 10:41:18,774 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-26 10:41:35,563 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-26 10:41:38,024 - config.logging_config - INFO - Команда /check_api_keys вызвана пользователем 810668767
+2025-02-26 12:23:29,692 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 12:23:29,693 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 12:23:34,353 - telegram.ext.Application - INFO - Application started
+2025-02-26 12:24:05,205 - config.logging_config - INFO - Команда /start вызвана пользователем 810668767
+2025-02-26 12:24:35,108 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-26 12:24:35,143 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-02-26 12:24:35,145 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 810668767.
+2025-02-26 12:25:08,323 - config.logging_config - INFO - Команда /check_api_keys вызвана пользователем 810668767
+2025-02-26 12:25:08,333 - config.logging_config - WARNING - API-ключи не найдены для пользователя 810668767.
+2025-02-26 13:34:33,818 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 13:34:33,819 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 13:34:39,191 - telegram.ext.Application - INFO - Application started
+2025-02-26 13:34:46,823 - config.logging_config - INFO - Команда /start вызвана пользователем 810668767
+2025-02-26 13:34:47,019 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 13:34:55,698 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-26 13:34:55,707 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 13:34:55,733 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-02-26 13:34:55,734 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 810668767.
+2025-02-26 13:34:58,394 - config.logging_config - INFO - Команда /check_api_keys вызвана пользователем 810668767
+2025-02-26 13:34:58,404 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 13:34:58,406 - config.logging_config - WARNING - API-ключи не найдены для пользователя 810668767.
+2025-02-26 13:36:02,471 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-02-26 13:36:02,473 - telegram.ext.Application - INFO - Application.stop() complete
+2025-02-26 13:36:30,164 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 13:36:30,166 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 13:36:35,242 - telegram.ext.Application - INFO - Application started
+2025-02-26 13:36:36,377 - config.logging_config - INFO - Команда /start вызвана пользователем 810668767
+2025-02-26 13:36:36,575 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 13:36:43,475 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-26 13:36:43,485 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 13:36:43,523 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-02-26 13:36:43,527 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 810668767.
+2025-02-26 13:36:45,536 - config.logging_config - INFO - Команда /check_api_keys вызвана пользователем 810668767
+2025-02-26 13:36:45,546 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 13:36:45,547 - config.logging_config - WARNING - API-ключи не найдены для пользователя 810668767.
+2025-02-26 13:36:55,681 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-02-26 13:36:55,682 - telegram.ext.Application - INFO - Application.stop() complete
+2025-02-26 14:13:47,385 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 14:13:47,387 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 14:13:54,551 - telegram.ext.Application - INFO - Application started
+2025-02-26 14:14:06,066 - config.logging_config - INFO - Команда /start вызвана пользователем 810668767
+2025-02-26 14:14:06,257 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 14:14:06,261 - config.logging_config - INFO - Параметры успешно загружены для пользователя 810668767.
+2025-02-26 14:14:13,540 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-26 14:14:13,549 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 14:14:13,551 - config.logging_config - INFO - Параметры успешно загружены для пользователя 810668767.
+2025-02-26 14:14:13,577 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-02-26 14:14:13,580 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 810668767.
+2025-02-26 14:14:16,191 - config.logging_config - INFO - Команда /check_api_keys вызвана пользователем 810668767
+2025-02-26 14:14:16,200 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 14:14:16,202 - config.logging_config - INFO - Параметры успешно загружены для пользователя 810668767.
+2025-02-26 14:14:16,203 - config.logging_config - WARNING - API-ключи не найдены для пользователя 810668767.
+2025-02-26 14:14:31,588 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-02-26 14:14:31,591 - telegram.ext.Application - INFO - Application.stop() complete
+2025-02-26 15:07:30,114 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 15:07:30,115 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 15:07:35,444 - telegram.ext.Application - INFO - Application started
+2025-02-26 15:08:34,839 - config.logging_config - INFO - Команда /start вызвана пользователем 810668767
+2025-02-26 15:08:35,031 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 15:08:35,034 - config.logging_config - INFO - Параметры успешно загружены для пользователя 810668767.
+2025-02-26 15:08:35,035 - config.logging_config - INFO - Состояние UserContext для пользователя 810668767: api_key=False, api_secret=False
+2025-02-26 15:08:45,108 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-26 15:08:45,134 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-02-26 15:08:45,136 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 810668767.
+2025-02-26 15:08:48,140 - config.logging_config - INFO - Команда /check_api_keys вызвана пользователем 810668767
+2025-02-26 15:08:48,141 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 15:09:21,154 - config.logging_config - INFO - Команда /balance вызвана пользователем 810668767
+2025-02-26 15:09:27,834 - config.logging_config - INFO - Полный ответ fetch_balance() для пользователя 810668767: {'info': {'makerCommission': None, 'takerCommission': None, 'buyerCommission': None, 'sellerCommission': None, 'canTrade': True, 'canWithdraw': True, 'canDeposit': True, 'updateTime': None, 'accountType': 'SPOT', 'balances': [{'asset': 'USDT', 'free': '51.15428059', 'locked': '0'}, {'asset': 'KAS', 'free': '61.15', 'locked': '0'}, {'asset': 'LTC', 'free': '0.1', 'locked': '0'}], 'permissions': ['SPOT']}, 'USDT': {'free': 51.15428059, 'used': 0.0, 'total': 51.15428059}, 'KAS': {'free': 61.15, 'used': 0.0, 'total': 61.15}, 'LTC': {'free': 0.1, 'used': 0.0, 'total': 0.1}, 'free': {'USDT': 51.15428059, 'KAS': 61.15, 'LTC': 0.1}, 'used': {'USDT': 0.0, 'KAS': 0.0, 'LTC': 0.0}, 'total': {'USDT': 51.15428059, 'KAS': 61.15, 'LTC': 0.1}}
+2025-02-26 15:09:42,625 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 810668767
+2025-02-26 15:09:55,353 - config.logging_config - INFO - Команда /balance вызвана пользователем 810668767
+2025-02-26 15:10:01,288 - config.logging_config - INFO - Полный ответ fetch_balance() для пользователя 810668767: {'info': {'makerCommission': None, 'takerCommission': None, 'buyerCommission': None, 'sellerCommission': None, 'canTrade': True, 'canWithdraw': True, 'canDeposit': True, 'updateTime': None, 'accountType': 'SPOT', 'balances': [{'asset': 'USDT', 'free': '51.15428059', 'locked': '0'}, {'asset': 'KAS', 'free': '61.15', 'locked': '0'}, {'asset': 'LTC', 'free': '0.1', 'locked': '0'}], 'permissions': ['SPOT']}, 'USDT': {'free': 51.15428059, 'used': 0.0, 'total': 51.15428059}, 'KAS': {'free': 61.15, 'used': 0.0, 'total': 61.15}, 'LTC': {'free': 0.1, 'used': 0.0, 'total': 0.1}, 'free': {'USDT': 51.15428059, 'KAS': 61.15, 'LTC': 0.1}, 'used': {'USDT': 0.0, 'KAS': 0.0, 'LTC': 0.0}, 'total': {'USDT': 51.15428059, 'KAS': 61.15, 'LTC': 0.1}}
+2025-02-26 15:12:36,301 - config.logging_config - INFO - Команда /set_params вызвана пользователем 810668767
+2025-02-26 15:14:40,304 - config.logging_config - INFO - Команда /buy вызвана пользователем 810668767
+2025-02-26 15:14:46,883 - config.logging_config - ERROR - Ошибка при покупке для пользователя 810668767: mexc createOrder() requires the price argument with market buy orders to calculate total order cost(amount to spend), where cost = amount * price. Supply a price argument to createOrder() call if you want the cost to be calculated for you from price and amount, or, alternatively, add .options['createMarketBuyOrderRequiresPrice'] = False to supply the cost in the amount argument(the exchange-specific behaviour)
+2025-02-26 15:16:38,743 - config.logging_config - INFO - Команда /set_params вызвана пользователем 810668767
+2025-02-26 15:16:38,768 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-02-26 15:16:38,770 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-02-26 15:16:50,465 - config.logging_config - INFO - Команда /stop вызвана пользователем 810668767
+2025-02-26 15:16:52,413 - config.logging_config - INFO - Автоматическая торговля остановлена для пользователя 810668767.
+2025-02-26 15:16:56,757 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 810668767
+2025-02-26 15:17:44,981 - config.logging_config - INFO - Команда /stop вызвана пользователем 810668767
+2025-02-26 15:18:02,769 - config.logging_config - INFO - Автоматическая торговля остановлена для пользователя 810668767.
+2025-02-26 15:22:02,673 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-02-26 15:22:02,675 - telegram.ext.Application - INFO - Application.stop() complete
+2025-02-26 15:28:27,092 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 15:28:27,094 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 15:28:32,138 - telegram.ext.Application - INFO - Application started
+2025-02-26 15:28:33,643 - config.logging_config - INFO - Команда /start вызвана пользователем 810668767
+2025-02-26 15:28:33,855 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 15:28:33,858 - config.logging_config - INFO - Параметры успешно загружены для пользователя 810668767.
+2025-02-26 15:28:33,861 - config.logging_config - INFO - Состояние UserContext для пользователя 810668767: api_key=False, api_secret=False
+2025-02-26 15:28:37,056 - config.logging_config - INFO - Команда /check_api_keys вызвана пользователем 810668767
+2025-02-26 15:28:37,057 - config.logging_config - WARNING - API-ключи не найдены для пользователя 810668767.
+2025-02-26 15:28:48,844 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-26 15:28:48,870 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-02-26 15:28:48,872 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 810668767.
+2025-02-26 15:28:51,699 - config.logging_config - INFO - Команда /check_api_keys вызвана пользователем 810668767
+2025-02-26 15:28:51,700 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 15:29:01,988 - config.logging_config - INFO - Команда /set_params вызвана пользователем 810668767
+2025-02-26 15:29:40,427 - config.logging_config - INFO - Команда /buy вызвана пользователем 810668767
+2025-02-26 15:29:46,626 - config.logging_config - ERROR - Ошибка при покупке для пользователя 810668767: mexc createOrder() requires the price argument with market buy orders to calculate total order cost(amount to spend), where cost = amount * price. Supply a price argument to createOrder() call if you want the cost to be calculated for you from price and amount, or, alternatively, add .options['createMarketBuyOrderRequiresPrice'] = False to supply the cost in the amount argument(the exchange-specific behaviour)
+2025-02-26 15:45:35,981 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-02-26 15:45:35,983 - telegram.ext.Application - INFO - Application.stop() complete
+2025-02-26 15:46:03,805 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 15:46:03,806 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 15:46:08,878 - telegram.ext.Application - INFO - Application started
+2025-02-26 15:46:11,658 - config.logging_config - INFO - Команда /start вызвана пользователем 810668767
+2025-02-26 15:46:11,850 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 15:46:11,852 - config.logging_config - INFO - Параметры успешно загружены для пользователя 810668767.
+2025-02-26 15:46:11,853 - config.logging_config - INFO - Состояние UserContext для пользователя 810668767: api_key=False, api_secret=False
+2025-02-26 15:46:20,679 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-26 15:46:20,704 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-02-26 15:46:20,707 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 810668767.
+2025-02-26 15:46:25,978 - config.logging_config - INFO - Команда /check_api_keys вызвана пользователем 810668767
+2025-02-26 15:46:25,979 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 15:46:29,098 - config.logging_config - INFO - Команда /balance вызвана пользователем 810668767
+2025-02-26 15:46:35,602 - config.logging_config - INFO - Полный ответ fetch_balance() для пользователя 810668767: {'info': {'makerCommission': None, 'takerCommission': None, 'buyerCommission': None, 'sellerCommission': None, 'canTrade': True, 'canWithdraw': True, 'canDeposit': True, 'updateTime': None, 'accountType': 'SPOT', 'balances': [{'asset': 'USDT', 'free': '51.15428059', 'locked': '0'}, {'asset': 'KAS', 'free': '61.15', 'locked': '0'}, {'asset': 'LTC', 'free': '0.1', 'locked': '0'}], 'permissions': ['SPOT']}, 'USDT': {'free': 51.15428059, 'used': 0.0, 'total': 51.15428059}, 'KAS': {'free': 61.15, 'used': 0.0, 'total': 61.15}, 'LTC': {'free': 0.1, 'used': 0.0, 'total': 0.1}, 'free': {'USDT': 51.15428059, 'KAS': 61.15, 'LTC': 0.1}, 'used': {'USDT': 0.0, 'KAS': 0.0, 'LTC': 0.0}, 'total': {'USDT': 51.15428059, 'KAS': 61.15, 'LTC': 0.1}}
+2025-02-26 15:46:45,180 - config.logging_config - INFO - Команда /buy вызвана пользователем 810668767
+2025-02-26 15:46:51,219 - config.logging_config - ERROR - Ошибка при покупке для пользователя 810668767: mexc createOrder() requires the price argument with market buy orders to calculate total order cost(amount to spend), where cost = amount * price. Supply a price argument to createOrder() call if you want the cost to be calculated for you from price and amount, or, alternatively, add .options['createMarketBuyOrderRequiresPrice'] = False to supply the cost in the amount argument(the exchange-specific behaviour)
+2025-02-26 15:47:16,897 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-02-26 15:47:16,898 - telegram.ext.Application - INFO - Application.stop() complete
+2025-02-26 16:11:13,775 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 16:11:13,777 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 16:11:19,045 - telegram.ext.Application - INFO - Application started
+2025-02-26 16:11:29,876 - config.logging_config - INFO - Команда /start вызвана пользователем 810668767
+2025-02-26 16:11:30,064 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 16:11:30,067 - config.logging_config - INFO - Параметры успешно загружены для пользователя 810668767.
+2025-02-26 16:11:33,667 - config.logging_config - INFO - Команда /check_api_keys вызвана пользователем 810668767
+2025-02-26 16:11:33,668 - config.logging_config - WARNING - API-ключи не найдены для пользователя 810668767.
+2025-02-26 16:11:40,043 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-26 16:11:40,069 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-02-26 16:11:40,071 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 810668767.
+2025-02-26 16:11:45,491 - config.logging_config - INFO - Команда /buy вызвана пользователем 810668767
+2025-02-26 16:11:51,496 - config.logging_config - INFO - Выполнена покупка для пользователя 810668767: {'id': 'C02__523420934183444485040', 'clientOrderId': None, 'timestamp': 1740575511266, 'datetime': '2025-02-26T13:11:51.266Z', 'lastTradeTimestamp': None, 'status': None, 'symbol': 'KAS/USDT', 'type': 'market', 'timeInForce': 'IOC', 'side': 'buy', 'price': None, 'stopPrice': None, 'triggerPrice': None, 'average': None, 'amount': 15.0, 'cost': None, 'filled': None, 'remaining': None, 'fee': None, 'trades': [], 'info': {'symbol': 'KASUSDT', 'orderId': 'C02__523420934183444485040', 'orderListId': '-1', 'price': '0.093508', 'origQty': '0', 'type': 'MARKET', 'side': 'BUY', 'transactTime': '1740575511266'}, 'fees': [], 'postOnly': None, 'reduceOnly': None}
+2025-02-26 16:12:34,983 - config.logging_config - INFO - Команда /balance вызвана пользователем 810668767
+2025-02-26 16:12:41,603 - config.logging_config - INFO - Полный ответ fetch_balance() для пользователя 810668767: {'info': {'makerCommission': None, 'takerCommission': None, 'buyerCommission': None, 'sellerCommission': None, 'canTrade': True, 'canWithdraw': True, 'canDeposit': True, 'updateTime': None, 'accountType': 'SPOT', 'balances': [{'asset': 'USDT', 'free': '36.15481879', 'locked': '0'}, {'asset': 'KAS', 'free': '229.6', 'locked': '0'}, {'asset': 'LTC', 'free': '0.1', 'locked': '0'}], 'permissions': ['SPOT']}, 'USDT': {'free': 36.15481879, 'used': 0.0, 'total': 36.15481879}, 'KAS': {'free': 229.6, 'used': 0.0, 'total': 229.6}, 'LTC': {'free': 0.1, 'used': 0.0, 'total': 0.1}, 'free': {'USDT': 36.15481879, 'KAS': 229.6, 'LTC': 0.1}, 'used': {'USDT': 0.0, 'KAS': 0.0, 'LTC': 0.0}, 'total': {'USDT': 36.15481879, 'KAS': 229.6, 'LTC': 0.1}}
+2025-02-26 16:13:51,923 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 810668767
+2025-02-26 16:15:05,019 - config.logging_config - INFO - Команда /set_params вызвана пользователем 810668767
+2025-02-26 16:15:13,976 - config.logging_config - INFO - Команда /stop вызвана пользователем 810668767
+2025-02-26 16:15:19,708 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-02-26 16:15:19,709 - telegram.ext.Application - INFO - Application.stop() complete
+2025-02-26 16:15:19,907 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-40' coro=<start_trading() running at C:\Users\Storj2\kas_bot\app\autotrade_handlers.py:92> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-02-26 16:36:34,348 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 16:36:34,351 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 16:36:39,255 - telegram.ext.Application - INFO - Application started
+2025-02-26 16:36:54,835 - config.logging_config - INFO - Команда /start вызвана пользователем 810668767
+2025-02-26 16:36:55,027 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 16:36:55,030 - config.logging_config - INFO - Параметры успешно загружены для пользователя 810668767.
+2025-02-26 16:37:03,374 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-26 16:37:03,396 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-02-26 16:37:03,399 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 810668767.
+2025-02-26 16:37:08,273 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 810668767
+2025-02-26 16:38:46,562 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-02-26 16:38:46,563 - telegram.ext.Application - INFO - Application.stop() complete
+2025-02-26 16:38:46,769 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-14' coro=<start_trading() running at C:\Users\Storj2\kas_bot\app\autotrade_handlers.py:104> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-02-26 17:12:13,541 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 17:12:13,543 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 17:12:18,713 - telegram.ext.Application - INFO - Application started
+2025-02-26 17:12:35,793 - config.logging_config - INFO - Команда /start вызвана пользователем 810668767
+2025-02-26 17:12:35,994 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 17:12:35,998 - config.logging_config - INFO - Параметры успешно загружены для пользователя 810668767.
+2025-02-26 17:12:44,923 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-26 17:12:44,948 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-02-26 17:12:44,951 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 810668767.
+2025-02-26 17:12:55,842 - config.logging_config - INFO - Команда /balance вызвана пользователем 810668767
+2025-02-26 17:13:01,361 - config.logging_config - INFO - Полный ответ fetch_balance() для пользователя 810668767: {'info': {'makerCommission': None, 'takerCommission': None, 'buyerCommission': None, 'sellerCommission': None, 'canTrade': True, 'canWithdraw': True, 'canDeposit': True, 'updateTime': None, 'accountType': 'SPOT', 'balances': [{'asset': 'USDT', 'free': '36.15481879', 'locked': '0'}, {'asset': 'KAS', 'free': '229.6', 'locked': '0'}, {'asset': 'LTC', 'free': '0.1', 'locked': '0'}], 'permissions': ['SPOT']}, 'USDT': {'free': 36.15481879, 'used': 0.0, 'total': 36.15481879}, 'KAS': {'free': 229.6, 'used': 0.0, 'total': 229.6}, 'LTC': {'free': 0.1, 'used': 0.0, 'total': 0.1}, 'free': {'USDT': 36.15481879, 'KAS': 229.6, 'LTC': 0.1}, 'used': {'USDT': 0.0, 'KAS': 0.0, 'LTC': 0.0}, 'total': {'USDT': 36.15481879, 'KAS': 229.6, 'LTC': 0.1}}
+2025-02-26 17:13:47,848 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 810668767
+2025-02-26 17:13:47,851 - app.trading_logic - INFO - Автоматическая торговля запущена для пользователя 810668767.
+2025-02-26 17:24:05,869 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-02-26 17:24:05,870 - telegram.ext.Application - INFO - Application.stop() complete
+2025-02-26 17:27:27,882 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 17:27:27,887 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 17:27:32,904 - telegram.ext.Application - INFO - Application started
+2025-02-26 17:27:33,066 - config.logging_config - INFO - Команда /start вызвана пользователем 810668767
+2025-02-26 17:27:33,239 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 17:27:33,241 - config.logging_config - INFO - Параметры успешно загружены для пользователя 810668767.
+2025-02-26 17:27:38,876 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-26 17:27:38,901 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-02-26 17:27:38,906 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 810668767.
+2025-02-26 17:27:42,418 - config.logging_config - INFO - Команда /set_params вызвана пользователем 810668767
+2025-02-26 17:27:46,591 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 810668767
+2025-02-26 17:27:46,593 - app.trading_logic - INFO - Автоматическая торговля запущена для пользователя 810668767.
+2025-02-26 17:30:51,133 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-02-26 17:30:51,134 - telegram.ext.Application - INFO - Application.stop() complete
+2025-02-26 17:44:48,049 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 17:44:48,051 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 17:44:53,059 - telegram.ext.Application - INFO - Application started
+2025-02-26 17:44:53,988 - config.logging_config - INFO - Команда /start вызвана пользователем 810668767
+2025-02-26 17:44:54,230 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 17:44:54,245 - config.logging_config - INFO - Параметры успешно загружены для пользователя 810668767.
+2025-02-26 17:45:05,888 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-26 17:45:11,168 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-26 17:45:11,193 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-02-26 17:45:11,196 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 810668767.
+2025-02-26 17:45:16,383 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 810668767
+2025-02-26 17:45:16,386 - app.trading_logic - INFO - Автоматическая торговля запущена для пользователя 810668767.
+2025-02-26 17:45:40,757 - config.logging_config - INFO - Команда /stop вызвана пользователем 810668767
+2025-02-26 17:45:48,582 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-02-26 17:45:48,584 - telegram.ext.Application - INFO - Application.stop() complete
+2025-02-26 17:46:16,296 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 17:46:16,297 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 17:46:21,149 - telegram.ext.Application - INFO - Application started
+2025-02-26 17:46:21,314 - config.logging_config - INFO - Команда /check_api_keys вызвана пользователем 810668767
+2025-02-26 17:46:21,473 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 17:46:21,475 - config.logging_config - INFO - Параметры успешно загружены для пользователя 810668767.
+2025-02-26 17:46:21,476 - config.logging_config - WARNING - API-ключи не найдены для пользователя 810668767.
+2025-02-26 17:46:26,511 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-26 17:46:26,538 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-02-26 17:46:26,540 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 810668767.
+2025-02-26 17:46:27,743 - config.logging_config - INFO - Команда /check_api_keys вызвана пользователем 810668767
+2025-02-26 17:46:27,750 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 17:46:41,724 - config.logging_config - INFO - Команда /buy вызвана пользователем 810668767
+2025-02-26 17:46:48,875 - config.logging_config - INFO - Выполнена покупка для пользователя 810668767: {'id': 'C02__523444831184343040040', 'clientOrderId': None, 'timestamp': 1740581208755, 'datetime': '2025-02-26T14:46:48.755Z', 'lastTradeTimestamp': None, 'status': None, 'symbol': 'KAS/USDT', 'type': 'market', 'timeInForce': 'IOC', 'side': 'buy', 'price': None, 'stopPrice': None, 'triggerPrice': None, 'average': None, 'amount': 10.0, 'cost': None, 'filled': None, 'remaining': None, 'fee': None, 'trades': [], 'info': {'symbol': 'KASUSDT', 'orderId': 'C02__523444831184343040040', 'orderListId': '-1', 'price': '0.094229', 'origQty': '0', 'type': 'MARKET', 'side': 'BUY', 'transactTime': '1740581208755'}, 'fees': [], 'postOnly': None, 'reduceOnly': None}
+2025-02-26 17:47:02,166 - config.logging_config - INFO - Команда /set_params вызвана пользователем 810668767
+2025-02-26 18:00:17,052 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-02-26 18:00:17,054 - telegram.ext.Application - INFO - Application.stop() complete
+2025-02-26 18:01:13,142 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 18:01:13,144 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 18:01:18,101 - telegram.ext.Application - INFO - Application started
+2025-02-26 18:01:26,140 - config.logging_config - INFO - Команда /start вызвана пользователем 810668767
+2025-02-26 18:01:26,335 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 18:01:26,337 - config.logging_config - INFO - Параметры успешно загружены для пользователя 810668767.
+2025-02-26 18:01:32,248 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-26 18:01:32,275 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-02-26 18:01:32,276 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 810668767.
+2025-02-26 18:01:57,533 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 810668767
+2025-02-26 18:01:57,536 - app.trading_logic - INFO - Автоматическая торговля запущена для пользователя 810668767.
+2025-02-26 18:11:45,983 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-02-26 18:11:45,985 - telegram.ext.Application - INFO - Application.stop() complete
+2025-02-26 18:35:44,196 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 18:35:44,197 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 18:35:48,906 - telegram.ext.Application - INFO - Application started
+2025-02-26 18:38:02,328 - config.logging_config - INFO - Команда /start вызвана пользователем 810668767
+2025-02-26 18:38:02,518 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 18:38:02,520 - config.logging_config - INFO - Параметры успешно загружены для пользователя 810668767.
+2025-02-26 18:38:07,632 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-26 18:38:07,658 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-02-26 18:38:07,660 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 810668767.
+2025-02-26 18:38:13,146 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 810668767
+2025-02-26 18:38:19,174 - config.logging_config - INFO - Первый ордер выполнен: {'id': 'C02__523457792800026624040', 'clientOrderId': None, 'timestamp': 1740584299045, 'datetime': '2025-02-26T15:38:19.045Z', 'lastTradeTimestamp': None, 'status': None, 'symbol': 'KAS/USDT', 'type': 'market', 'timeInForce': 'IOC', 'side': 'buy', 'price': None, 'stopPrice': None, 'triggerPrice': None, 'average': None, 'amount': 15, 'cost': None, 'filled': None, 'remaining': None, 'fee': None, 'trades': [], 'info': {'symbol': 'KASUSDT', 'orderId': 'C02__523457792800026624040', 'orderListId': '-1', 'price': '0.096108', 'origQty': '0', 'type': 'MARKET', 'side': 'BUY', 'transactTime': '1740584299045'}, 'fees': [], 'postOnly': None, 'reduceOnly': None}
+2025-02-26 18:38:19,410 - config.logging_config - INFO - Запускаем start_trading для KAS/USDT пользователя 810668767
+2025-02-26 18:38:19,413 - app.trading_logic - INFO - Автоматическая торговля запущена для пользователя 810668767.
+2025-02-26 18:45:30,849 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-02-26 18:45:30,850 - telegram.ext.Application - INFO - Application.stop() complete
+2025-02-26 18:49:11,942 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 18:49:11,943 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 18:49:17,062 - telegram.ext.Application - INFO - Application started
+2025-02-26 18:49:20,449 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-26 18:49:20,641 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 18:49:20,644 - config.logging_config - INFO - Параметры успешно загружены для пользователя 810668767.
+2025-02-26 18:49:20,669 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-02-26 18:49:20,673 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 810668767.
+2025-02-26 18:49:24,727 - config.logging_config - INFO - Команда /set_params вызвана пользователем 810668767
+2025-02-26 18:49:37,249 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 810668767
+2025-02-26 18:49:37,252 - app.trading_logic - INFO - Автоматическая торговля запущена для пользователя 810668767.
+2025-02-26 19:05:57,743 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-02-26 19:05:57,744 - telegram.ext.Application - INFO - Application.stop() complete
+2025-02-26 19:06:19,859 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 19:06:19,861 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 19:06:24,861 - telegram.ext.Application - INFO - Application started
+2025-02-26 19:06:33,456 - config.logging_config - INFO - Команда /balance вызвана пользователем 810668767
+2025-02-26 19:06:33,650 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 19:06:33,653 - config.logging_config - INFO - Параметры успешно загружены для пользователя 810668767.
+2025-02-26 19:06:33,654 - config.logging_config - ERROR - Ошибка при получении баланса для пользователя 810668767: API-ключи не установлены.
+2025-02-26 19:06:36,383 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-26 19:06:36,409 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-02-26 19:06:36,411 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 810668767.
+2025-02-26 19:06:38,846 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 810668767
+2025-02-26 19:06:38,849 - app.trading_logic - INFO - Автоматическая торговля запущена для пользователя 810668767.
+2025-02-26 19:11:06,911 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-02-26 19:11:06,913 - telegram.ext.Application - INFO - Application.stop() complete
+2025-02-26 19:16:42,010 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 19:16:42,011 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 19:16:46,820 - config.logging_config - ERROR - Критическая ошибка при запуске бота: cannot import name 'autobuy' from 'app.autotrade_handlers' (C:\Users\Storj2\kas_bot\app\autotrade_handlers.py)
+2025-02-26 19:18:10,880 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 19:18:10,882 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 19:18:15,930 - telegram.ext.Application - INFO - Application started
+2025-02-26 19:18:18,533 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-26 19:18:18,725 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 19:18:18,727 - config.logging_config - INFO - Параметры успешно загружены для пользователя 810668767.
+2025-02-26 19:18:18,758 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-02-26 19:18:18,777 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 810668767.
+2025-02-26 19:18:24,426 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 810668767
+2025-02-26 19:18:24,429 - app.trading_logic - INFO - Автоматическая торговля запущена для пользователя 810668767.
+2025-02-26 19:22:42,940 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-02-26 19:22:42,942 - telegram.ext.Application - INFO - Application.stop() complete
+2025-02-26 19:23:14,639 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 19:23:14,640 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 19:23:19,496 - config.logging_config - ERROR - Критическая ошибка при запуске бота: attempted relative import beyond top-level package
+2025-02-26 19:24:35,554 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-26 19:24:35,555 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-26 19:24:40,608 - telegram.ext.Application - INFO - Application started
+2025-02-26 19:24:48,692 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-26 19:24:48,884 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 19:24:48,887 - config.logging_config - INFO - Параметры успешно загружены для пользователя 810668767.
+2025-02-26 19:24:48,917 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-02-26 19:24:48,931 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 810668767.
+2025-02-26 19:25:03,901 - config.logging_config - INFO - Команда /check_api_keys вызвана пользователем 810668767
+2025-02-26 19:25:03,902 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-02-26 19:34:13,668 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-02-26 19:34:13,669 - telegram.ext.Application - INFO - Application.stop() complete

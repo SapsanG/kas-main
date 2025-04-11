@@ -1,0 +1,759 @@
+2025-02-11 17:48:27,503 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-11 17:48:27,504 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-11 17:48:33,032 - telegram.ext.Application - INFO - Application started
+2025-02-11 17:49:57,806 - config.logging_config - INFO - Команда /start вызвана пользователем 810668767
+2025-02-11 17:50:06,465 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-11 17:50:08,890 - config.logging_config - INFO - Команда /check_api_keys вызвана пользователем 810668767
+2025-02-11 17:50:34,401 - config.logging_config - INFO - Команда /balance вызвана пользователем 810668767
+2025-02-11 17:50:34,413 - config.logging_config - ERROR - Ошибка при получении баланса для пользователя 810668767: API-ключи не установлены.
+2025-02-11 17:50:41,576 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-11 17:50:48,227 - config.logging_config - INFO - Команда /check_api_keys вызвана пользователем 810668767
+2025-02-11 17:51:23,468 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-02-11 17:51:23,469 - telegram.ext.Application - INFO - Application.stop() complete
+2025-02-11 17:59:02,404 - config.logging_config - INFO - Проверяем таблицу users.
+2025-02-11 17:59:02,421 - config.logging_config - INFO - User ID: 810668767
+2025-02-11 17:59:02,424 - config.logging_config - INFO - API Key Encrypted: gAAAAABnq2PBfqmKqtWD9WHRBISoQ4Ba980PvhPCDTmz65tcKZlU4689t4mzemAuPURndvMqZvOMtXVps_2xaDE4cyj39ZntJrJXtJ3RD5H5LVbsAGLJalU=
+2025-02-11 17:59:02,428 - config.logging_config - INFO - API Secret Encrypted: gAAAAABnq2PBrCxrFcQSuZ0rfigmiEO95ZOj3ZItEXdP-TULphfUaHCC74BXuDYf4TYr39t1VCPQBZiPQNLIq46rGB2rlIxTenxbYTqM0FI866ezR77zhquyJC4ck8FaelTGjNuFBuBR
+2025-02-11 17:59:02,432 - config.logging_config - INFO - Profit Percentage: 0.3
+2025-02-11 17:59:02,435 - config.logging_config - INFO - Fall Percentage: 1.0
+2025-02-11 17:59:02,538 - config.logging_config - INFO - Delay Seconds: 30
+2025-02-11 17:59:02,554 - config.logging_config - INFO - Order Size: 40.0
+2025-02-11 18:18:02,412 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-02-11 18:18:02,414 - config.logging_config - INFO - Бот успешно запущен!
+2025-02-11 18:18:07,747 - telegram.ext.Application - INFO - Application started
+2025-02-11 18:19:33,382 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-02-11 18:19:50,196 - config.logging_config - INFO - Команда /check_api_keys вызвана пользователем 810668767
+2025-02-12 03:08:37,388 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.READ_NUM_BYTES, timeout=timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Storj2\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 293, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Storj2\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 750, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 744, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_updater.py", line 371, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_extbot.py", line 650, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 4480, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 619, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\ext\_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\_bot.py", line 648, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\request\_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\request\_baserequest.py", line 334, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Storj2\kas_bot\venv\Lib\site-packages\telegram\request\_httpxrequest.py", line 317, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ReadError: 
+2025-03-24 15:18:18,616 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-03-24 15:18:18,616 - config.logging_config - INFO - Бот успешно запущен!
+2025-03-24 15:18:25,575 - config.logging_config - ERROR - Критическая ошибка при запуске бота: Timed out
+2025-03-24 15:18:31,931 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-03-24 15:18:31,931 - config.logging_config - INFO - Бот успешно запущен!
+2025-03-24 15:18:33,127 - telegram.ext.Application - INFO - Application started
+2025-03-24 15:23:10,436 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-03-24 15:23:10,436 - telegram.ext.Application - INFO - Application.stop() complete
+2025-03-24 15:23:12,494 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-03-24 15:23:12,494 - config.logging_config - INFO - Бот успешно запущен!
+2025-03-24 15:23:18,459 - config.logging_config - ERROR - Критическая ошибка при запуске бота: Timed out
+2025-03-24 15:23:23,965 - config.logging_config - ERROR - Не удалось отправить уведомление администратору: Timed out
+2025-03-24 15:23:29,376 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-03-24 15:23:29,376 - config.logging_config - INFO - Бот успешно запущен!
+2025-03-24 15:23:30,355 - telegram.ext.Application - INFO - Application started
+2025-03-24 15:24:01,787 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-03-24 15:24:01,787 - config.logging_config - INFO - Бот успешно запущен!
+2025-03-24 15:24:02,710 - telegram.ext.Application - INFO - Application started
+2025-03-24 15:24:08,777 - config.logging_config - INFO - Команда /start вызвана пользователем 913981672
+2025-03-24 15:24:08,786 - config.logging_config - WARNING - Зашифрованные API-ключи отсутствуют для пользователя 913981672.
+2025-03-24 15:24:08,786 - config.logging_config - INFO - Параметры успешно загружены для пользователя 913981672.
+2025-03-24 15:24:21,749 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 913981672
+2025-03-24 15:24:21,750 - app.trading_logic - INFO - Автоматическая торговля запущена для пользователя 913981672.
+2025-03-24 15:26:27,572 - config.logging_config - INFO - Команда /start вызвана пользователем 913981672
+2025-03-24 15:26:30,761 - config.logging_config - INFO - Команда /balance вызвана пользователем 913981672
+2025-03-24 15:26:30,761 - config.logging_config - ERROR - Ошибка при получении баланса для пользователя 913981672: API-ключи не установлены.
+2025-03-24 15:26:36,032 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 913981672
+2025-03-24 15:29:55,259 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-03-24 15:29:55,260 - telegram.ext.Application - INFO - Application.stop() complete
+2025-03-24 15:30:00,697 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-03-24 15:30:00,697 - config.logging_config - INFO - Бот успешно запущен!
+2025-03-24 15:30:02,058 - telegram.ext.Application - INFO - Application started
+2025-03-24 15:30:06,753 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-03-24 15:30:06,753 - config.logging_config - INFO - Бот успешно запущен!
+2025-03-24 15:30:07,660 - telegram.ext.Application - INFO - Application started
+2025-03-24 15:31:03,797 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 913981672
+2025-03-24 15:31:03,809 - config.logging_config - WARNING - Зашифрованные API-ключи отсутствуют для пользователя 913981672.
+2025-03-24 15:31:03,810 - config.logging_config - INFO - Параметры успешно загружены для пользователя 913981672.
+2025-03-24 15:31:03,860 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 913981672.
+2025-03-24 15:31:03,860 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 913981672.
+2025-03-24 15:31:07,539 - config.logging_config - INFO - Команда /check_api_keys вызвана пользователем 913981672
+2025-03-24 15:31:07,539 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 913981672.
+2025-03-24 15:34:05,180 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 913981672
+2025-03-24 15:34:05,181 - app.trading_logic - INFO - Автоматическая торговля запущена для пользователя 913981672.
+2025-03-24 15:36:14,495 - config.logging_config - INFO - Команда /balance вызвана пользователем 913981672
+2025-03-24 15:36:19,712 - config.logging_config - INFO - Полный ответ fetch_balance() для пользователя 913981672: {'info': {'makerCommission': None, 'takerCommission': None, 'buyerCommission': None, 'sellerCommission': None, 'canTrade': True, 'canWithdraw': True, 'canDeposit': True, 'updateTime': None, 'accountType': 'SPOT', 'balances': [{'asset': 'USDT', 'free': '3.21394517', 'locked': '0'}, {'asset': 'KAS', 'free': '369.67', 'locked': '0'}, {'asset': 'LTC', 'free': '0.1', 'locked': '0'}], 'permissions': ['SPOT']}, 'USDT': {'free': 3.21394517, 'used': 0.0, 'total': 3.21394517}, 'KAS': {'free': 369.67, 'used': 0.0, 'total': 369.67}, 'LTC': {'free': 0.1, 'used': 0.0, 'total': 0.1}, 'free': {'USDT': 3.21394517, 'KAS': 369.67, 'LTC': 0.1}, 'used': {'USDT': 0.0, 'KAS': 0.0, 'LTC': 0.0}, 'total': {'USDT': 3.21394517, 'KAS': 369.67, 'LTC': 0.1}}
+2025-03-24 15:36:28,541 - config.logging_config - INFO - Команда /stop вызвана пользователем 913981672
+2025-03-24 15:36:31,228 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 913981672
+2025-03-24 15:36:31,229 - app.trading_logic - INFO - Автоматическая торговля запущена для пользователя 913981672.
+2025-03-24 15:36:33,592 - config.logging_config - INFO - Команда /balance вызвана пользователем 913981672
+2025-03-24 15:36:37,984 - config.logging_config - INFO - Полный ответ fetch_balance() для пользователя 913981672: {'info': {'makerCommission': None, 'takerCommission': None, 'buyerCommission': None, 'sellerCommission': None, 'canTrade': True, 'canWithdraw': True, 'canDeposit': True, 'updateTime': None, 'accountType': 'SPOT', 'balances': [{'asset': 'USDT', 'free': '3.21394517', 'locked': '0'}, {'asset': 'KAS', 'free': '369.67', 'locked': '0'}, {'asset': 'LTC', 'free': '0.1', 'locked': '0'}], 'permissions': ['SPOT']}, 'USDT': {'free': 3.21394517, 'used': 0.0, 'total': 3.21394517}, 'KAS': {'free': 369.67, 'used': 0.0, 'total': 369.67}, 'LTC': {'free': 0.1, 'used': 0.0, 'total': 0.1}, 'free': {'USDT': 3.21394517, 'KAS': 369.67, 'LTC': 0.1}, 'used': {'USDT': 0.0, 'KAS': 0.0, 'LTC': 0.0}, 'total': {'USDT': 3.21394517, 'KAS': 369.67, 'LTC': 0.1}}
+2025-03-24 15:38:23,482 - config.logging_config - INFO - Команда /stats вызвана пользователем 913981672
+2025-03-24 15:42:40,639 - config.logging_config - INFO - Команда /set_params вызвана пользователем 913981672
+2025-03-24 15:43:10,388 - config.logging_config - INFO - Команда /set_params вызвана пользователем 913981672
+2025-03-24 15:43:10,404 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 913981672.
+2025-03-24 15:43:10,404 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 913981672.
+2025-03-24 15:43:20,292 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 913981672
+2025-03-24 15:43:28,152 - config.logging_config - INFO - Команда /start вызвана пользователем 913981672
+2025-03-24 15:43:31,175 - config.logging_config - INFO - Команда /stats вызвана пользователем 913981672
+2025-03-24 15:43:37,730 - config.logging_config - INFO - Команда /profit_total вызвана пользователем 913981672
+2025-03-24 15:43:42,971 - config.logging_config - INFO - Команда /buy вызвана пользователем 913981672
+2025-03-24 15:43:46,871 - config.logging_config - INFO - Команда /start вызвана пользователем 913981672
+2025-03-24 15:43:48,628 - config.logging_config - INFO - Команда /balance вызвана пользователем 913981672
+2025-03-24 15:43:53,641 - config.logging_config - INFO - Полный ответ fetch_balance() для пользователя 913981672: {'info': {'makerCommission': None, 'takerCommission': None, 'buyerCommission': None, 'sellerCommission': None, 'canTrade': True, 'canWithdraw': True, 'canDeposit': True, 'updateTime': None, 'accountType': 'SPOT', 'balances': [{'asset': 'USDT', 'free': '3.21394517', 'locked': '0'}, {'asset': 'KAS', 'free': '369.67', 'locked': '0'}, {'asset': 'LTC', 'free': '0.1', 'locked': '0'}], 'permissions': ['SPOT']}, 'USDT': {'free': 3.21394517, 'used': 0.0, 'total': 3.21394517}, 'KAS': {'free': 369.67, 'used': 0.0, 'total': 369.67}, 'LTC': {'free': 0.1, 'used': 0.0, 'total': 0.1}, 'free': {'USDT': 3.21394517, 'KAS': 369.67, 'LTC': 0.1}, 'used': {'USDT': 0.0, 'KAS': 0.0, 'LTC': 0.0}, 'total': {'USDT': 3.21394517, 'KAS': 369.67, 'LTC': 0.1}}
+2025-03-24 15:46:53,259 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-03-24 15:46:53,260 - telegram.ext.Application - INFO - Application.stop() complete
+2025-03-24 15:46:57,005 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-03-24 15:46:57,005 - config.logging_config - INFO - Бот успешно запущен!
+2025-03-24 15:46:58,067 - telegram.ext.Application - INFO - Application started
+2025-03-24 15:47:05,154 - config.logging_config - INFO - Команда /start вызвана пользователем 913981672
+2025-03-24 15:47:05,189 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 913981672.
+2025-03-24 15:47:05,189 - config.logging_config - INFO - Параметры успешно загружены для пользователя 913981672.
+2025-03-24 15:47:08,185 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 913981672
+2025-03-24 15:47:08,185 - app.trading_logic - INFO - Автоматическая торговля запущена для пользователя 913981672.
+2025-03-24 15:47:13,929 - config.logging_config - INFO - Команда /stats вызвана пользователем 913981672
+2025-03-24 15:47:23,417 - config.logging_config - INFO - Команда /profit_total вызвана пользователем 913981672
+2025-03-24 15:47:27,364 - config.logging_config - INFO - Команда /profit_history вызвана пользователем 913981672
+2025-03-24 15:47:32,255 - config.logging_config - INFO - Команда /stop вызвана пользователем 913981672
+2025-03-24 15:47:35,941 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 913981672
+2025-03-24 15:47:35,942 - app.trading_logic - INFO - Автоматическая торговля запущена для пользователя 913981672.
+2025-03-24 15:49:54,011 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-03-24 15:49:54,011 - config.logging_config - INFO - Бот успешно запущен!
+2025-03-24 15:49:55,227 - telegram.ext.Application - INFO - Application started
+2025-03-24 15:50:06,587 - config.logging_config - INFO - Команда /start вызвана пользователем 913981672
+2025-03-24 15:50:06,639 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 913981672.
+2025-03-24 15:50:06,639 - config.logging_config - INFO - Параметры успешно загружены для пользователя 913981672.
+2025-03-24 15:50:17,207 - config.logging_config - INFO - Команда /balance вызвана пользователем 913981672
+2025-03-24 15:50:17,208 - config.logging_config - ERROR - Ошибка при получении баланса для пользователя 913981672: API-ключи не установлены.
+2025-03-24 15:50:33,561 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 913981672
+2025-03-24 15:50:33,572 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 913981672.
+2025-03-24 15:50:33,572 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 913981672.
+2025-03-24 15:50:37,711 - config.logging_config - INFO - Команда /set_params вызвана пользователем 913981672
+2025-03-24 15:50:43,076 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 913981672
+2025-03-24 15:50:43,077 - app.trading_logic - INFO - Автоматическая торговля запущена для пользователя 913981672.
+2025-03-24 15:51:53,208 - config.logging_config - INFO - Начинаем обновление размера ордера для всех пользователей.
+2025-03-24 15:51:53,209 - config.logging_config - INFO - Обновлен размер ордера для пользователя 810668767: было 40.0, стало 0.1
+2025-03-24 15:51:53,210 - config.logging_config - INFO - Обновлен размер ордера для пользователя 913981672: было 0.1, стало 0.1
+2025-03-24 15:51:53,211 - config.logging_config - INFO - Обновление размера ордера завершено.
+2025-03-24 15:51:57,368 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-03-24 15:51:57,368 - config.logging_config - INFO - Бот успешно запущен!
+2025-03-24 15:51:58,479 - telegram.ext.Application - INFO - Application started
+2025-03-24 15:52:03,841 - config.logging_config - INFO - Команда /set_params вызвана пользователем 913981672
+2025-03-24 15:52:03,881 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 913981672.
+2025-03-24 15:52:03,881 - config.logging_config - INFO - Параметры успешно загружены для пользователя 913981672.
+2025-03-24 15:52:10,105 - config.logging_config - INFO - Команда /start вызвана пользователем 913981672
+2025-03-24 15:52:12,924 - config.logging_config - INFO - Команда /balance вызвана пользователем 913981672
+2025-03-24 15:52:12,924 - config.logging_config - ERROR - Ошибка при получении баланса для пользователя 913981672: API-ключи не установлены.
+2025-03-24 15:52:22,218 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 913981672
+2025-03-24 15:52:22,227 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 913981672.
+2025-03-24 15:52:22,227 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 913981672.
+2025-03-24 15:52:25,410 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 913981672
+2025-03-24 15:52:25,411 - app.trading_logic - INFO - Автоматическая торговля запущена для пользователя 913981672.
+2025-03-24 15:52:42,090 - config.logging_config - INFO - Команда /set_params вызвана пользователем 913981672
+2025-03-24 15:52:47,214 - config.logging_config - INFO - Команда /balance вызвана пользователем 913981672
+2025-03-24 15:52:51,720 - config.logging_config - INFO - Полный ответ fetch_balance() для пользователя 913981672: {'info': {'makerCommission': None, 'takerCommission': None, 'buyerCommission': None, 'sellerCommission': None, 'canTrade': True, 'canWithdraw': True, 'canDeposit': True, 'updateTime': None, 'accountType': 'SPOT', 'balances': [{'asset': 'USDT', 'free': '42.90797197', 'locked': '0'}], 'permissions': ['SPOT']}, 'USDT': {'free': 42.90797197, 'used': 0.0, 'total': 42.90797197}, 'free': {'USDT': 42.90797197}, 'used': {'USDT': 0.0}, 'total': {'USDT': 42.90797197}}
+2025-03-24 15:53:13,367 - config.logging_config - INFO - Команда /balance вызвана пользователем 913981672
+2025-03-24 15:53:19,144 - config.logging_config - INFO - Полный ответ fetch_balance() для пользователя 913981672: {'info': {'makerCommission': None, 'takerCommission': None, 'buyerCommission': None, 'sellerCommission': None, 'canTrade': True, 'canWithdraw': True, 'canDeposit': True, 'updateTime': None, 'accountType': 'SPOT', 'balances': [{'asset': 'USDT', 'free': '42.90797197', 'locked': '0'}], 'permissions': ['SPOT']}, 'USDT': {'free': 42.90797197, 'used': 0.0, 'total': 42.90797197}, 'free': {'USDT': 42.90797197}, 'used': {'USDT': 0.0}, 'total': {'USDT': 42.90797197}}
+2025-03-24 15:55:16,075 - config.logging_config - INFO - Команда /balance вызвана пользователем 913981672
+2025-03-24 15:55:20,533 - config.logging_config - INFO - Полный ответ fetch_balance() для пользователя 913981672: {'info': {'makerCommission': None, 'takerCommission': None, 'buyerCommission': None, 'sellerCommission': None, 'canTrade': True, 'canWithdraw': True, 'canDeposit': True, 'updateTime': None, 'accountType': 'SPOT', 'balances': [{'asset': 'USDT', 'free': '42.90797197', 'locked': '0'}], 'permissions': ['SPOT']}, 'USDT': {'free': 42.90797197, 'used': 0.0, 'total': 42.90797197}, 'free': {'USDT': 42.90797197}, 'used': {'USDT': 0.0}, 'total': {'USDT': 42.90797197}}
+2025-03-24 15:55:24,235 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 913981672
+2025-03-24 15:55:26,933 - config.logging_config - INFO - Команда /stop вызвана пользователем 913981672
+2025-03-24 15:56:48,960 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-03-24 15:56:48,961 - telegram.ext.Application - INFO - Application.stop() complete
+2025-03-24 15:56:50,807 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-03-24 15:56:50,807 - config.logging_config - INFO - Бот успешно запущен!
+2025-03-24 15:56:51,792 - telegram.ext.Application - INFO - Application started
+2025-03-24 15:56:56,626 - config.logging_config - INFO - Команда /set_params вызвана пользователем 913981672
+2025-03-24 15:56:56,665 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 913981672.
+2025-03-24 15:56:56,665 - config.logging_config - INFO - Параметры успешно загружены для пользователя 913981672.
+2025-03-24 15:56:59,373 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 913981672
+2025-03-24 15:56:59,375 - app.trading_logic - INFO - ========== НАЧАЛО АВТОТОРГОВЛИ ==========
+2025-03-24 15:56:59,375 - app.trading_logic - INFO - Автоторговля запущена для пользователя 913981672, символ KAS/USDT
+2025-03-24 15:57:00,154 - app.trading_logic - INFO - Контекст пользователя получен успешно
+2025-03-24 15:57:00,361 - app.trading_logic - WARNING - Автоторговля уже запущена для пользователя 913981672
+2025-03-24 15:57:17,221 - config.logging_config - INFO - Команда /balance вызвана пользователем 913981672
+2025-03-24 15:57:17,222 - config.logging_config - ERROR - Ошибка при получении баланса для пользователя 913981672: API-ключи не установлены.
+2025-03-24 15:57:27,492 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 913981672
+2025-03-24 15:57:27,500 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 913981672.
+2025-03-24 15:57:27,500 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 913981672.
+2025-03-24 15:57:31,369 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 913981672
+2025-03-24 15:57:39,195 - config.logging_config - INFO - Команда /stop вызвана пользователем 913981672
+2025-03-24 15:57:41,143 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 913981672
+2025-03-24 15:57:41,146 - app.trading_logic - INFO - ========== НАЧАЛО АВТОТОРГОВЛИ ==========
+2025-03-24 15:57:41,146 - app.trading_logic - INFO - Автоторговля запущена для пользователя 913981672, символ KAS/USDT
+2025-03-24 15:57:41,991 - app.trading_logic - INFO - Контекст пользователя получен успешно
+2025-03-24 15:57:42,148 - app.trading_logic - WARNING - Автоторговля уже запущена для пользователя 913981672
+2025-03-24 16:01:01,580 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-03-24 16:01:01,584 - telegram.ext.Application - INFO - Application.stop() complete
+2025-03-24 16:01:07,034 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-03-24 16:01:07,034 - config.logging_config - INFO - Бот успешно запущен!
+2025-03-24 16:01:07,967 - telegram.ext.Application - INFO - Application started
+2025-03-24 16:01:13,423 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-03-24 16:01:13,424 - telegram.ext.Application - INFO - Application.stop() complete
+2025-03-24 16:01:56,554 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-03-24 16:01:56,555 - config.logging_config - INFO - Бот успешно запущен!
+2025-03-24 16:01:57,721 - telegram.ext.Application - INFO - Application started
+2025-03-24 16:02:11,482 - config.logging_config - INFO - Команда /start вызвана пользователем 913981672
+2025-03-24 16:02:11,536 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 913981672.
+2025-03-24 16:02:11,536 - config.logging_config - INFO - Параметры успешно загружены для пользователя 913981672.
+2025-03-24 16:02:15,502 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 913981672
+2025-03-24 16:02:15,510 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 913981672.
+2025-03-24 16:02:15,510 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 913981672.
+2025-03-24 16:02:18,739 - config.logging_config - INFO - Команда /balance вызвана пользователем 913981672
+2025-03-24 16:02:24,387 - config.logging_config - INFO - Полный ответ fetch_balance() для пользователя 913981672: {'info': {'makerCommission': None, 'takerCommission': None, 'buyerCommission': None, 'sellerCommission': None, 'canTrade': True, 'canWithdraw': True, 'canDeposit': True, 'updateTime': None, 'accountType': 'SPOT', 'balances': [{'asset': 'USDT', 'free': '42.90797197', 'locked': '0'}], 'permissions': ['SPOT']}, 'USDT': {'free': 42.90797197, 'used': 0.0, 'total': 42.90797197}, 'free': {'USDT': 42.90797197}, 'used': {'USDT': 0.0}, 'total': {'USDT': 42.90797197}}
+2025-03-24 16:02:29,905 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 913981672
+2025-03-24 16:02:29,906 - app.trading_logic - INFO - ========== НАЧАЛО АВТОТОРГОВЛИ ==========
+2025-03-24 16:02:29,906 - app.trading_logic - INFO - Автоторговля запущена для пользователя 913981672, символ KAS/USDT
+2025-03-24 16:02:30,665 - app.trading_logic - WARNING - Автоторговля уже запущена для пользователя 913981672
+2025-03-24 16:02:30,666 - app.trading_logic - INFO - Сброс предыдущего состояния автоторговли
+2025-03-24 16:02:30,823 - app.trading_logic - INFO - Контекст пользователя получен успешно
+2025-03-24 16:02:30,991 - app.trading_logic - INFO - Статус торговли установлен в активный для пользователя 913981672
+2025-03-24 16:02:31,172 - app.trading_logic - INFO - Параметры пользователя 913981672:
+2025-03-24 16:02:31,172 - app.trading_logic - INFO - - Процент прибыли: 0.3%
+2025-03-24 16:02:31,172 - app.trading_logic - INFO - - Процент падения: 1.0%
+2025-03-24 16:02:31,172 - app.trading_logic - INFO - - Задержка: 30 сек
+2025-03-24 16:02:31,172 - app.trading_logic - INFO - - Размер ордера: 0.1 USDT
+2025-03-24 16:02:31,373 - app.trading_logic - INFO - Попытка создания экземпляра MEXC для пользователя 913981672
+2025-03-24 16:02:31,540 - app.trading_logic - INFO - Экземпляр MEXC успешно создан
+2025-03-24 16:02:31,691 - app.trading_logic - INFO - Проверка баланса пользователя 913981672
+2025-03-24 16:02:37,208 - app.trading_logic - INFO - Баланс USDT пользователя 913981672: 42.90797197
+2025-03-24 16:02:38,269 - app.trading_logic - INFO - Проверка наличия торговой пары KAS/USDT
+2025-03-24 16:02:38,413 - app.trading_logic - INFO - Торговая пара KAS/USDT доступна для торговли
+2025-03-24 16:02:38,581 - app.trading_logic - INFO - Получение текущей цены для KAS/USDT
+2025-03-24 16:02:39,179 - app.trading_logic - INFO - Текущая цена KAS/USDT: 0.081821
+2025-03-24 16:02:39,352 - app.trading_logic - INFO - Подготовка к созданию ордера на покупку
+2025-03-24 16:02:39,511 - app.trading_logic - INFO - Цена покупки установлена: 0.081821
+2025-03-24 16:02:39,511 - app.trading_logic - INFO - Размер ордера: 0.1 USDT
+2025-03-24 16:02:39,511 - app.trading_logic - INFO - Минимальный размер ордера: 1.0 USDT
+2025-03-24 16:02:39,511 - app.trading_logic - INFO - Минимальное количество: 0.001
+2025-03-24 16:02:39,511 - app.trading_logic - INFO - Расчетное количество для покупки: 1.2221801249068087
+2025-03-24 16:02:39,512 - app.trading_logic - ERROR - Ошибка при получении информации о минимальных требованиях: 'float' object cannot be interpreted as an integer
+2025-03-24 16:02:39,697 - app.trading_logic - INFO - ========== КОНЕЦ АВТОТОРГОВЛИ ==========
+2025-03-24 16:05:29,727 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-03-24 16:05:29,727 - config.logging_config - INFO - Бот успешно запущен!
+2025-03-24 16:05:30,722 - telegram.ext.Application - INFO - Application started
+2025-03-24 16:05:36,035 - config.logging_config - INFO - Команда /balance вызвана пользователем 913981672
+2025-03-24 16:05:36,075 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 913981672.
+2025-03-24 16:05:36,075 - config.logging_config - INFO - Параметры успешно загружены для пользователя 913981672.
+2025-03-24 16:05:36,075 - config.logging_config - ERROR - Ошибка при получении баланса для пользователя 913981672: API-ключи не установлены.
+2025-03-24 16:05:47,210 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 913981672
+2025-03-24 16:05:47,219 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 913981672.
+2025-03-24 16:05:47,219 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 913981672.
+2025-03-24 16:05:51,894 - config.logging_config - INFO - Команда /set_params вызвана пользователем 913981672
+2025-03-24 16:05:59,355 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 913981672
+2025-03-24 16:05:59,357 - app.trading_logic - INFO - ========== НАЧАЛО АВТОТОРГОВЛИ ==========
+2025-03-24 16:05:59,357 - app.trading_logic - INFO - Автоторговля запущена для пользователя 913981672, символ KAS/USDT
+2025-03-24 16:06:00,197 - app.trading_logic - WARNING - Автоторговля уже запущена для пользователя 913981672
+2025-03-24 16:06:00,197 - app.trading_logic - INFO - Сброс предыдущего состояния автоторговли
+2025-03-24 16:06:00,424 - app.trading_logic - INFO - Контекст пользователя получен успешно
+2025-03-24 16:06:00,596 - app.trading_logic - INFO - Статус торговли установлен в активный для пользователя 913981672
+2025-03-24 16:06:00,780 - app.trading_logic - INFO - Параметры пользователя 913981672:
+2025-03-24 16:06:00,780 - app.trading_logic - INFO - - Процент прибыли: 0.3%
+2025-03-24 16:06:00,780 - app.trading_logic - INFO - - Процент падения: 1.0%
+2025-03-24 16:06:00,780 - app.trading_logic - INFO - - Задержка: 30 сек
+2025-03-24 16:06:00,780 - app.trading_logic - INFO - - Размер ордера: 0.1 USDT
+2025-03-24 16:06:00,958 - app.trading_logic - INFO - Попытка создания экземпляра MEXC для пользователя 913981672
+2025-03-24 16:06:01,164 - app.trading_logic - INFO - Экземпляр MEXC успешно создан
+2025-03-24 16:06:01,387 - app.trading_logic - INFO - Проверка баланса пользователя 913981672
+2025-03-24 16:06:23,143 - app.trading_logic - ERROR - Ошибка при проверке баланса: mexc GET https://api.mexc.com/api/v3/capital/config/getall?timestamp=1742821561542&recvWindow=5000&signature=523caf40852e68f08f92074bb1535733c1de989a8143886c9a5fe268d9b153f7
+2025-03-24 16:06:28,149 - app.trading_logic - ERROR - Неожиданная ошибка в автоторговле: Timed out
+2025-03-24 16:06:28,162 - app.trading_logic - ERROR - Traceback (most recent call last):
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 66, in map_httpcore_exceptions
+    yield
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 366, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/telegram/request/_httpxrequest.py", line 268, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1530, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1682, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1719, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 365, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 83, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kirilli/Work/kas/app/trading_logic.py", line 108, in start_trading
+    await update.message.reply_text(f"❌ Ошибка при проверке баланса: {str(e)}")
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 340, in _request_wrapper
+    raise exc
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 330, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/telegram/request/_httpxrequest.py", line 285, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+
+2025-03-24 16:06:33,172 - app.trading_logic - INFO - ========== КОНЕЦ АВТОТОРГОВЛИ ==========
+2025-03-24 16:06:33,174 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-12' coro=<start_trading() done, defined at /Users/kirilli/Work/kas/app/trading_logic.py:21> exception=TimedOut('Timed out')>
+Traceback (most recent call last):
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 66, in map_httpcore_exceptions
+    yield
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 366, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/telegram/request/_httpxrequest.py", line 268, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1530, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1682, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpx/_client.py", line 1719, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 365, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 83, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kirilli/Work/kas/app/trading_logic.py", line 366, in start_trading
+    await update.message.reply_text(f"❌ Неожиданная ошибка: {str(e)}")
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 340, in _request_wrapper
+    raise exc
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 330, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilli/Work/kas/.venv/lib/python3.11/site-packages/telegram/request/_httpxrequest.py", line 285, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2025-03-24 16:07:10,114 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-03-24 16:07:10,114 - config.logging_config - INFO - Бот успешно запущен!
+2025-03-24 16:07:15,242 - config.logging_config - ERROR - Критическая ошибка при запуске бота: Timed out
+2025-03-24 16:07:20,246 - config.logging_config - ERROR - Не удалось отправить уведомление администратору: Timed out
+2025-03-24 16:07:20,966 - config.logging_config - INFO - Бот остановлен пользователем.
+2025-03-24 16:19:01,278 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-03-24 16:19:01,279 - config.logging_config - INFO - Бот успешно запущен!
+2025-03-24 16:19:06,385 - config.logging_config - ERROR - Критическая ошибка при запуске бота: Timed out
+2025-03-24 16:19:11,388 - config.logging_config - INFO - Бот остановлен пользователем.
+2025-03-24 16:19:13,434 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-03-24 16:19:13,434 - config.logging_config - INFO - Бот успешно запущен!
+2025-03-24 16:19:17,660 - telegram.ext.Application - INFO - Application started
+2025-03-24 16:19:26,272 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 913981672
+2025-03-24 16:19:26,330 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 913981672.
+2025-03-24 16:19:26,331 - config.logging_config - INFO - Параметры успешно загружены для пользователя 913981672.
+2025-03-24 16:19:26,333 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 913981672.
+2025-03-24 16:19:26,333 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 913981672.
+2025-03-24 16:19:30,046 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 913981672
+2025-03-24 16:19:30,047 - app.trading_logic - INFO - ========== НАЧАЛО АВТОТОРГОВЛИ ==========
+2025-03-24 16:19:30,048 - app.trading_logic - INFO - Автоторговля запущена для пользователя 913981672, символ KAS/USDT
+2025-03-24 16:19:30,897 - app.trading_logic - WARNING - Автоторговля уже запущена для пользователя 913981672
+2025-03-24 16:19:30,897 - app.trading_logic - INFO - Сброс предыдущего состояния автоторговли
+2025-03-24 16:19:31,043 - app.trading_logic - INFO - Контекст пользователя получен успешно
+2025-03-24 16:19:31,198 - app.trading_logic - INFO - Статус торговли установлен в активный для пользователя 913981672
+2025-03-24 16:19:31,382 - app.trading_logic - INFO - Параметры пользователя 913981672:
+2025-03-24 16:19:31,383 - app.trading_logic - INFO - - Процент прибыли: 0.3%
+2025-03-24 16:19:31,383 - app.trading_logic - INFO - - Процент падения: 1.0%
+2025-03-24 16:19:31,383 - app.trading_logic - INFO - - Задержка: 30 сек
+2025-03-24 16:19:31,383 - app.trading_logic - INFO - - Размер ордера: 0.1 USDT
+2025-03-24 16:19:31,583 - app.trading_logic - INFO - Попытка создания экземпляра MEXC для пользователя 913981672
+2025-03-24 16:19:31,816 - app.trading_logic - INFO - Экземпляр MEXC успешно создан
+2025-03-24 16:19:32,035 - app.trading_logic - INFO - Проверка баланса пользователя 913981672
+2025-03-24 16:19:40,157 - app.trading_logic - INFO - Баланс USDT пользователя 913981672: 42.90797197
+2025-03-24 16:19:41,059 - app.trading_logic - INFO - Проверка наличия торговой пары KAS/USDT
+2025-03-24 16:19:41,216 - app.trading_logic - INFO - Торговая пара KAS/USDT доступна для торговли
+2025-03-24 16:19:41,369 - app.trading_logic - INFO - Получение текущей цены для KAS/USDT
+2025-03-24 16:19:41,998 - app.trading_logic - INFO - Текущая цена KAS/USDT: 0.079938
+2025-03-24 16:19:42,156 - app.trading_logic - INFO - Подготовка к созданию ордера на покупку
+2025-03-24 16:19:42,355 - app.trading_logic - INFO - Цена покупки установлена: 0.079938
+2025-03-24 16:19:42,356 - app.trading_logic - INFO - Размер ордера: 0.1 USDT
+2025-03-24 16:19:42,356 - app.trading_logic - INFO - Минимальный размер ордера: 1.0 USDT
+2025-03-24 16:19:42,356 - app.trading_logic - INFO - Минимальное количество: 0.001
+2025-03-24 16:19:42,356 - app.trading_logic - INFO - Расчетное количество для покупки: 1.250969501363557
+2025-03-24 16:19:42,356 - app.trading_logic - INFO - Исходное значение precision для amount: 0.01 (тип: float)
+2025-03-24 16:19:42,356 - app.trading_logic - ERROR - Ошибка при получении информации о минимальных требованиях: name 'math' is not defined
+2025-03-24 16:19:42,534 - app.trading_logic - INFO - ========== КОНЕЦ АВТОТОРГОВЛИ ==========
+2025-03-24 16:19:58,037 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-03-24 16:19:58,038 - telegram.ext.Application - INFO - Application.stop() complete
+2025-03-24 16:20:00,154 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-03-24 16:20:00,154 - config.logging_config - INFO - Бот успешно запущен!
+2025-03-24 16:20:01,188 - telegram.ext.Application - INFO - Application started
+2025-03-24 16:20:02,423 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 913981672
+2025-03-24 16:20:02,486 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 913981672.
+2025-03-24 16:20:02,487 - config.logging_config - INFO - Параметры успешно загружены для пользователя 913981672.
+2025-03-24 16:20:02,489 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 913981672.
+2025-03-24 16:20:02,489 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 913981672.
+2025-03-24 16:20:05,620 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 913981672
+2025-03-24 16:20:05,621 - app.trading_logic - INFO - ========== НАЧАЛО АВТОТОРГОВЛИ ==========
+2025-03-24 16:20:05,621 - app.trading_logic - INFO - Автоторговля запущена для пользователя 913981672, символ KAS/USDT
+2025-03-24 16:20:06,409 - app.trading_logic - WARNING - Автоторговля уже запущена для пользователя 913981672
+2025-03-24 16:20:06,409 - app.trading_logic - INFO - Сброс предыдущего состояния автоторговли
+2025-03-24 16:20:06,591 - app.trading_logic - INFO - Контекст пользователя получен успешно
+2025-03-24 16:20:06,757 - app.trading_logic - INFO - Статус торговли установлен в активный для пользователя 913981672
+2025-03-24 16:20:06,931 - app.trading_logic - INFO - Параметры пользователя 913981672:
+2025-03-24 16:20:06,931 - app.trading_logic - INFO - - Процент прибыли: 0.3%
+2025-03-24 16:20:06,931 - app.trading_logic - INFO - - Процент падения: 1.0%
+2025-03-24 16:20:06,931 - app.trading_logic - INFO - - Задержка: 30 сек
+2025-03-24 16:20:06,932 - app.trading_logic - INFO - - Размер ордера: 0.1 USDT
+2025-03-24 16:20:07,133 - app.trading_logic - INFO - Попытка создания экземпляра MEXC для пользователя 913981672
+2025-03-24 16:20:07,362 - app.trading_logic - INFO - Экземпляр MEXC успешно создан
+2025-03-24 16:20:07,571 - app.trading_logic - INFO - Проверка баланса пользователя 913981672
+2025-03-24 16:20:14,531 - app.trading_logic - INFO - Баланс USDT пользователя 913981672: 42.90797197
+2025-03-24 16:20:15,587 - app.trading_logic - INFO - Проверка наличия торговой пары KAS/USDT
+2025-03-24 16:20:15,848 - app.trading_logic - INFO - Торговая пара KAS/USDT доступна для торговли
+2025-03-24 16:20:16,135 - app.trading_logic - INFO - Получение текущей цены для KAS/USDT
+2025-03-24 16:20:16,770 - app.trading_logic - INFO - Текущая цена KAS/USDT: 0.08001
+2025-03-24 16:20:16,908 - app.trading_logic - INFO - Подготовка к созданию ордера на покупку
+2025-03-24 16:20:17,052 - app.trading_logic - INFO - Цена покупки установлена: 0.08001
+2025-03-24 16:20:17,052 - app.trading_logic - INFO - Размер ордера: 0.1 USDT
+2025-03-24 16:20:17,052 - app.trading_logic - INFO - Минимальный размер ордера: 1.0 USDT
+2025-03-24 16:20:17,052 - app.trading_logic - INFO - Минимальное количество: 0.001
+2025-03-24 16:20:17,052 - app.trading_logic - INFO - Расчетное количество для покупки: 1.249843769528809
+2025-03-24 16:20:17,053 - app.trading_logic - INFO - Исходное значение precision для amount: 0.01 (тип: float)
+2025-03-24 16:20:17,053 - app.trading_logic - INFO - Итоговая точность для количества: 2
+2025-03-24 16:20:17,208 - app.trading_logic - INFO - Создание рыночного ордера на покупку 1.25 KAS
+2025-03-24 16:20:17,358 - app.trading_logic - INFO - Попытка покупки методом 1 (указание количества)...
+2025-03-24 16:20:17,864 - app.trading_logic - INFO - Ордер на покупку успешно создан (метод 1): {'id': 'C02__532845143158476800040', 'clientOrderId': None, 'timestamp': 1742822417779, 'datetime': '2025-03-24T13:20:17.779Z', 'lastTradeTimestamp': None, 'status': None, 'symbol': 'KAS/USDT', 'type': 'market', 'timeInForce': 'IOC', 'side': 'buy', 'price': None, 'stopPrice': None, 'triggerPrice': None, 'average': None, 'amount': 1.25, 'cost': None, 'filled': None, 'remaining': None, 'fee': None, 'trades': [], 'info': {'symbol': 'KASUSDT', 'orderId': 'C02__532845143158476800040', 'orderListId': '-1', 'price': '0.083993', 'origQty': '0', 'type': 'MARKET', 'side': 'BUY', 'transactTime': '1742822417779'}, 'fees': [], 'postOnly': None, 'reduceOnly': None}
+2025-03-24 16:20:18,005 - app.trading_logic - INFO - Фактическое количество купленных монет: 1.25
+2025-03-24 16:20:18,007 - app.trading_logic - INFO - Расчетная цена продажи: 0.08025002999999999
+2025-03-24 16:20:18,007 - app.trading_logic - INFO - Исходное значение precision для price: 1e-06 (тип: float)
+2025-03-24 16:20:18,007 - app.trading_logic - INFO - Итоговая точность для цены: 6
+2025-03-24 16:20:18,007 - app.trading_logic - INFO - Создание лимитного ордера на продажу 1.25 KAS по цене 0.08025
+2025-03-24 16:20:18,566 - app.trading_logic - ERROR - Ошибка при создании ордера на продажу: mexc {"msg":"The minimum transaction volume cannot be less than：1USDT","code":30002,"_extend":{"quantity":"1USDT"}}
+2025-03-24 16:20:18,712 - app.trading_logic - INFO - Первая покупка и продажа успешно выполнены для пользователя 913981672
+2025-03-24 16:20:18,851 - app.trading_logic - INFO - Ожидание завершения торговли для пользователя 913981672
+2025-03-24 16:20:18,851 - app.trading_logic - INFO - Итерация ожидания #1 для пользователя 913981672
+2025-03-24 16:20:28,852 - app.trading_logic - INFO - Итерация ожидания #2 для пользователя 913981672
+2025-03-24 16:20:38,854 - app.trading_logic - INFO - Итерация ожидания #3 для пользователя 913981672
+2025-03-24 16:20:40,037 - app.trading_logic - INFO - Количество открытых ордеров: 0
+2025-03-24 16:20:40,037 - app.trading_logic - INFO - Все ордеры исполнены! Цикл автоторговли завершен.
+2025-03-24 16:20:50,997 - app.trading_logic - INFO - Итерация ожидания #4 для пользователя 913981672
+2025-03-24 16:21:00,999 - app.trading_logic - INFO - Итерация ожидания #5 для пользователя 913981672
+2025-03-24 16:21:08,608 - config.logging_config - INFO - Команда /start вызвана пользователем 913981672
+2025-03-24 16:21:11,000 - app.trading_logic - INFO - Итерация ожидания #6 для пользователя 913981672
+2025-03-24 16:21:11,418 - app.trading_logic - INFO - Количество открытых ордеров: 0
+2025-03-24 16:21:11,419 - app.trading_logic - INFO - Все ордеры исполнены! Цикл автоторговли завершен.
+2025-03-24 16:21:12,758 - config.logging_config - INFO - Команда /profit_total вызвана пользователем 913981672
+2025-03-24 16:21:14,434 - config.logging_config - INFO - Команда /profit_month вызвана пользователем 913981672
+2025-03-24 16:21:15,517 - config.logging_config - INFO - Команда /profit_today вызвана пользователем 913981672
+2025-03-24 16:21:17,595 - config.logging_config - INFO - Команда /stats вызвана пользователем 913981672
+2025-03-24 16:21:21,661 - app.trading_logic - INFO - Итерация ожидания #7 для пользователя 913981672
+2025-03-24 16:21:26,527 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-03-24 16:21:26,527 - telegram.ext.Application - INFO - Application.stop() complete
+2025-03-24 16:21:26,611 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-10' coro=<start_trading() running at /Users/kirilli/Work/kas/app/trading_logic.py:359> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-03-24 16:21:26,611 - app.trading_logic - INFO - ========== КОНЕЦ АВТОТОРГОВЛИ ==========
+2025-03-24 16:22:19,607 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-03-24 16:22:19,607 - config.logging_config - INFO - Бот успешно запущен!
+2025-03-24 16:22:20,719 - telegram.ext.Application - INFO - Application started
+2025-03-24 16:22:39,381 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 913981672
+2025-03-24 16:22:39,473 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 913981672.
+2025-03-24 16:22:39,473 - config.logging_config - INFO - Параметры успешно загружены для пользователя 913981672.
+2025-03-24 16:22:39,479 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 913981672.
+2025-03-24 16:22:39,479 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 913981672.
+2025-03-24 16:22:46,309 - config.logging_config - INFO - Команда /balance вызвана пользователем 913981672
+2025-03-24 16:22:53,241 - config.logging_config - INFO - Полный ответ fetch_balance() для пользователя 913981672: {'info': {'makerCommission': None, 'takerCommission': None, 'buyerCommission': None, 'sellerCommission': None, 'canTrade': True, 'canWithdraw': True, 'canDeposit': True, 'updateTime': None, 'accountType': 'SPOT', 'balances': [{'asset': 'USDT', 'free': '41.65867245', 'locked': '0'}, {'asset': 'KAS', 'free': '15.61', 'locked': '0'}], 'permissions': ['SPOT']}, 'USDT': {'free': 41.65867245, 'used': 0.0, 'total': 41.65867245}, 'KAS': {'free': 15.61, 'used': 0.0, 'total': 15.61}, 'free': {'USDT': 41.65867245, 'KAS': 15.61}, 'used': {'USDT': 0.0, 'KAS': 0.0}, 'total': {'USDT': 41.65867245, 'KAS': 15.61}}
+2025-03-24 16:23:03,524 - config.logging_config - INFO - Команда /set_params вызвана пользователем 913981672
+2025-03-24 16:23:22,706 - config.logging_config - INFO - Команда /set_params вызвана пользователем 913981672
+2025-03-24 16:23:22,715 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 913981672.
+2025-03-24 16:23:22,715 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 913981672.
+2025-03-24 16:23:34,520 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 913981672
+2025-03-24 16:23:34,521 - app.trading_logic - INFO - ========== НАЧАЛО АВТОТОРГОВЛИ ==========
+2025-03-24 16:23:34,522 - app.trading_logic - INFO - Автоторговля запущена для пользователя 913981672, символ KAS/USDT
+2025-03-24 16:23:35,332 - app.trading_logic - WARNING - Автоторговля уже запущена для пользователя 913981672
+2025-03-24 16:23:35,333 - app.trading_logic - INFO - Сброс предыдущего состояния автоторговли
+2025-03-24 16:23:35,508 - app.trading_logic - INFO - Контекст пользователя получен успешно
+2025-03-24 16:23:35,695 - app.trading_logic - INFO - Статус торговли установлен в активный для пользователя 913981672
+2025-03-24 16:23:35,878 - app.trading_logic - INFO - Параметры пользователя 913981672:
+2025-03-24 16:23:35,878 - app.trading_logic - INFO - - Процент прибыли: 0.3%
+2025-03-24 16:23:35,878 - app.trading_logic - INFO - - Процент падения: 1.0%
+2025-03-24 16:23:35,879 - app.trading_logic - INFO - - Задержка: 60 сек
+2025-03-24 16:23:35,879 - app.trading_logic - INFO - - Размер ордера: 1.0 USDT
+2025-03-24 16:23:36,120 - app.trading_logic - INFO - Попытка создания экземпляра MEXC для пользователя 913981672
+2025-03-24 16:23:36,377 - app.trading_logic - INFO - Экземпляр MEXC успешно создан
+2025-03-24 16:23:36,566 - app.trading_logic - INFO - Проверка баланса пользователя 913981672
+2025-03-24 16:23:43,830 - app.trading_logic - INFO - Баланс USDT пользователя 913981672: 41.65867245
+2025-03-24 16:23:44,964 - app.trading_logic - INFO - Проверка наличия торговой пары KAS/USDT
+2025-03-24 16:23:45,132 - app.trading_logic - INFO - Торговая пара KAS/USDT доступна для торговли
+2025-03-24 16:23:45,301 - app.trading_logic - INFO - Получение текущей цены для KAS/USDT
+2025-03-24 16:23:45,863 - app.trading_logic - INFO - Текущая цена KAS/USDT: 0.080224
+2025-03-24 16:23:46,011 - app.trading_logic - INFO - Подготовка к созданию ордера на покупку
+2025-03-24 16:23:46,168 - app.trading_logic - INFO - Цена покупки установлена: 0.080224
+2025-03-24 16:23:46,169 - app.trading_logic - INFO - Размер ордера: 1.0 USDT
+2025-03-24 16:23:46,169 - app.trading_logic - INFO - Минимальный размер ордера: 1.0 USDT
+2025-03-24 16:23:46,169 - app.trading_logic - INFO - Минимальное количество: 0.001
+2025-03-24 16:23:46,169 - app.trading_logic - INFO - Расчетное количество для покупки: 12.465097726366174
+2025-03-24 16:23:46,169 - app.trading_logic - INFO - Исходное значение precision для amount: 0.01 (тип: float)
+2025-03-24 16:23:46,169 - app.trading_logic - INFO - Итоговая точность для количества: 2
+2025-03-24 16:23:46,331 - app.trading_logic - INFO - Создание рыночного ордера на покупку 12.47 KAS
+2025-03-24 16:23:46,469 - app.trading_logic - INFO - Попытка покупки методом 1 (указание количества)...
+2025-03-24 16:23:46,914 - app.trading_logic - INFO - Ордер на покупку успешно создан (метод 1): {'id': 'C02__532846020002848773040', 'clientOrderId': None, 'timestamp': 1742822626835, 'datetime': '2025-03-24T13:23:46.835Z', 'lastTradeTimestamp': None, 'status': None, 'symbol': 'KAS/USDT', 'type': 'market', 'timeInForce': 'IOC', 'side': 'buy', 'price': None, 'stopPrice': None, 'triggerPrice': None, 'average': None, 'amount': 12.47, 'cost': None, 'filled': None, 'remaining': None, 'fee': None, 'trades': [], 'info': {'symbol': 'KASUSDT', 'orderId': 'C02__532846020002848773040', 'orderListId': '-1', 'price': '0.084234', 'origQty': '0', 'type': 'MARKET', 'side': 'BUY', 'transactTime': '1742822626835'}, 'fees': [], 'postOnly': None, 'reduceOnly': None}
+2025-03-24 16:23:47,128 - app.trading_logic - INFO - Фактическое количество купленных монет: 12.47
+2025-03-24 16:23:47,128 - app.trading_logic - INFO - Расчетная цена продажи: 0.080464672
+2025-03-24 16:23:47,128 - app.trading_logic - INFO - Исходное значение precision для price: 1e-06 (тип: float)
+2025-03-24 16:23:47,128 - app.trading_logic - INFO - Итоговая точность для цены: 6
+2025-03-24 16:23:47,128 - app.trading_logic - INFO - Создание лимитного ордера на продажу 12.47 KAS по цене 0.080465
+2025-03-24 16:23:47,779 - app.trading_logic - INFO - Ордер на продажу успешно создан: {'id': 'C02__532846023425417216040', 'clientOrderId': None, 'timestamp': 1742822627651, 'datetime': '2025-03-24T13:23:47.651Z', 'lastTradeTimestamp': None, 'status': None, 'symbol': 'KAS/USDT', 'type': 'limit', 'timeInForce': None, 'side': 'sell', 'price': 0.080465, 'stopPrice': None, 'triggerPrice': None, 'average': None, 'amount': 12.47, 'cost': None, 'filled': None, 'remaining': None, 'fee': None, 'trades': [], 'info': {'symbol': 'KASUSDT', 'orderId': 'C02__532846023425417216040', 'orderListId': '-1', 'price': '0.080465', 'origQty': '12.47', 'type': 'LIMIT', 'side': 'SELL', 'transactTime': '1742822627651'}, 'fees': [], 'postOnly': None, 'reduceOnly': None}
+2025-03-24 16:23:47,941 - app.trading_logic - INFO - Первая покупка и продажа успешно выполнены для пользователя 913981672
+2025-03-24 16:23:48,100 - app.trading_logic - INFO - Ожидание завершения торговли для пользователя 913981672
+2025-03-24 16:23:48,100 - app.trading_logic - INFO - Итерация ожидания #1 для пользователя 913981672
+2025-03-24 16:23:58,102 - app.trading_logic - INFO - Итерация ожидания #2 для пользователя 913981672
+2025-03-24 16:24:08,103 - app.trading_logic - INFO - Итерация ожидания #3 для пользователя 913981672
+2025-03-24 16:24:08,597 - app.trading_logic - INFO - Количество открытых ордеров: 1
+2025-03-24 16:24:08,598 - app.trading_logic - INFO - Ордер на продажу все еще открыт. Ожидаем исполнения.
+2025-03-24 16:24:18,599 - app.trading_logic - INFO - Итерация ожидания #4 для пользователя 913981672
+2025-03-24 16:24:28,602 - app.trading_logic - INFO - Итерация ожидания #5 для пользователя 913981672
+2025-03-24 16:24:38,605 - app.trading_logic - INFO - Итерация ожидания #6 для пользователя 913981672
+2025-03-24 16:24:39,062 - app.trading_logic - INFO - Количество открытых ордеров: 1
+2025-03-24 16:24:39,062 - app.trading_logic - INFO - Ордер на продажу все еще открыт. Ожидаем исполнения.
+2025-03-24 16:24:49,064 - app.trading_logic - INFO - Итерация ожидания #7 для пользователя 913981672
+2025-03-24 16:24:59,066 - app.trading_logic - INFO - Итерация ожидания #8 для пользователя 913981672
+2025-03-24 16:25:09,069 - app.trading_logic - INFO - Итерация ожидания #9 для пользователя 913981672
+2025-03-24 16:25:09,490 - app.trading_logic - INFO - Количество открытых ордеров: 1
+2025-03-24 16:25:09,490 - app.trading_logic - INFO - Ордер на продажу все еще открыт. Ожидаем исполнения.
+2025-03-24 16:25:19,491 - app.trading_logic - INFO - Итерация ожидания #10 для пользователя 913981672
+2025-03-24 16:25:29,493 - app.trading_logic - INFO - Итерация ожидания #11 для пользователя 913981672
+2025-03-24 16:25:33,970 - config.logging_config - INFO - Команда /stats вызвана пользователем 913981672
+2025-03-24 16:25:39,495 - app.trading_logic - INFO - Итерация ожидания #12 для пользователя 913981672
+2025-03-24 16:25:39,914 - app.trading_logic - INFO - Количество открытых ордеров: 1
+2025-03-24 16:25:39,915 - app.trading_logic - INFO - Ордер на продажу все еще открыт. Ожидаем исполнения.
+2025-03-24 16:25:46,399 - config.logging_config - INFO - Команда /profit_total вызвана пользователем 913981672
+2025-03-24 16:25:49,916 - app.trading_logic - INFO - Итерация ожидания #13 для пользователя 913981672
+2025-03-24 16:25:51,840 - config.logging_config - INFO - Команда /balance вызвана пользователем 913981672
+2025-03-24 16:25:58,636 - config.logging_config - INFO - Полный ответ fetch_balance() для пользователя 913981672: {'info': {'makerCommission': None, 'takerCommission': None, 'buyerCommission': None, 'sellerCommission': None, 'canTrade': True, 'canWithdraw': True, 'canDeposit': True, 'updateTime': None, 'accountType': 'SPOT', 'balances': [{'asset': 'USDT', 'free': '29.18914527', 'locked': '0'}, {'asset': 'KAS', 'free': '158.57', 'locked': '12.47'}], 'permissions': ['SPOT']}, 'USDT': {'free': 29.18914527, 'used': 0.0, 'total': 29.18914527}, 'KAS': {'free': 158.57, 'used': 12.47, 'total': 171.04}, 'free': {'USDT': 29.18914527, 'KAS': 158.57}, 'used': {'USDT': 0.0, 'KAS': 12.47}, 'total': {'USDT': 29.18914527, 'KAS': 171.04}}
+2025-03-24 16:25:59,918 - app.trading_logic - INFO - Итерация ожидания #14 для пользователя 913981672
+2025-03-24 16:26:09,920 - app.trading_logic - INFO - Итерация ожидания #15 для пользователя 913981672
+2025-03-24 16:26:10,346 - app.trading_logic - INFO - Количество открытых ордеров: 1
+2025-03-24 16:26:10,346 - app.trading_logic - INFO - Ордер на продажу все еще открыт. Ожидаем исполнения.
+2025-03-24 16:26:20,348 - app.trading_logic - INFO - Итерация ожидания #16 для пользователя 913981672
+2025-03-24 16:26:26,983 - config.logging_config - INFO - Команда /balance вызвана пользователем 913981672
+2025-03-24 16:26:33,507 - config.logging_config - INFO - Полный ответ fetch_balance() для пользователя 913981672: {'info': {'makerCommission': None, 'takerCommission': None, 'buyerCommission': None, 'sellerCommission': None, 'canTrade': True, 'canWithdraw': True, 'canDeposit': True, 'updateTime': None, 'accountType': 'SPOT', 'balances': [{'asset': 'USDT', 'free': '29.18914527', 'locked': '0'}, {'asset': 'KAS', 'free': '158.57', 'locked': '12.47'}], 'permissions': ['SPOT']}, 'USDT': {'free': 29.18914527, 'used': 0.0, 'total': 29.18914527}, 'KAS': {'free': 158.57, 'used': 12.47, 'total': 171.04}, 'free': {'USDT': 29.18914527, 'KAS': 158.57}, 'used': {'USDT': 0.0, 'KAS': 12.47}, 'total': {'USDT': 29.18914527, 'KAS': 171.04}}
+2025-03-24 16:26:33,510 - app.trading_logic - INFO - Итерация ожидания #17 для пользователя 913981672
+2025-03-24 16:26:43,511 - app.trading_logic - INFO - Итерация ожидания #18 для пользователя 913981672
+2025-03-24 16:26:44,093 - app.trading_logic - INFO - Количество открытых ордеров: 1
+2025-03-24 16:26:44,094 - app.trading_logic - INFO - Ордер на продажу все еще открыт. Ожидаем исполнения.
+2025-03-24 16:26:54,095 - app.trading_logic - INFO - Итерация ожидания #19 для пользователя 913981672
+2025-03-24 16:27:04,097 - app.trading_logic - INFO - Итерация ожидания #20 для пользователя 913981672
+2025-03-24 16:27:14,101 - app.trading_logic - INFO - Итерация ожидания #21 для пользователя 913981672
+2025-03-24 16:27:14,559 - app.trading_logic - INFO - Количество открытых ордеров: 1
+2025-03-24 16:27:14,559 - app.trading_logic - INFO - Ордер на продажу все еще открыт. Ожидаем исполнения.
+2025-03-24 16:27:24,561 - app.trading_logic - INFO - Итерация ожидания #22 для пользователя 913981672
+2025-03-24 16:27:34,565 - app.trading_logic - INFO - Итерация ожидания #23 для пользователя 913981672
+2025-03-24 16:27:39,050 - config.logging_config - INFO - Команда /balance вызвана пользователем 913981672
+2025-03-24 16:27:47,258 - config.logging_config - INFO - Полный ответ fetch_balance() для пользователя 913981672: {'info': {'makerCommission': None, 'takerCommission': None, 'buyerCommission': None, 'sellerCommission': None, 'canTrade': True, 'canWithdraw': True, 'canDeposit': True, 'updateTime': None, 'accountType': 'SPOT', 'balances': [{'asset': 'USDT', 'free': '29.18914527', 'locked': '0'}, {'asset': 'KAS', 'free': '158.57', 'locked': '12.47'}], 'permissions': ['SPOT']}, 'USDT': {'free': 29.18914527, 'used': 0.0, 'total': 29.18914527}, 'KAS': {'free': 158.57, 'used': 12.47, 'total': 171.04}, 'free': {'USDT': 29.18914527, 'KAS': 158.57}, 'used': {'USDT': 0.0, 'KAS': 12.47}, 'total': {'USDT': 29.18914527, 'KAS': 171.04}}
+2025-03-24 16:27:47,263 - app.trading_logic - INFO - Итерация ожидания #24 для пользователя 913981672
+2025-03-24 16:27:47,676 - app.trading_logic - INFO - Количество открытых ордеров: 1
+2025-03-24 16:27:47,677 - app.trading_logic - INFO - Ордер на продажу все еще открыт. Ожидаем исполнения.
+2025-03-24 16:27:53,260 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-03-24 16:27:53,260 - telegram.ext.Application - INFO - Application.stop() complete
+2025-03-24 16:27:53,315 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-14' coro=<start_trading() running at /Users/kirilli/Work/kas/app/trading_logic.py:359> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-03-24 16:27:53,315 - app.trading_logic - INFO - ========== КОНЕЦ АВТОТОРГОВЛИ ==========
