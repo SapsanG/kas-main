@@ -66,7 +66,9 @@ class EncryptionManager:
         return self.cipher_suite.decrypt(encrypted_data.encode()).decode()
 
 # Чтение ключа шифрования из файла
-with open(r"./encryption_key.txt", "rb") as key_file:
+from pathlib import Path
+root_dir = Path(__file__).parent.parent  # Переход на уровень выше (из app в корень)
+with open(root_dir / "encryption_key.txt", "rb") as key_file:
     encryption_key = key_file.read()
 
 # Глобальный менеджер шифрования

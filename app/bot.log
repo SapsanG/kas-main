@@ -789,3 +789,42 @@ task: <Task pending name='Task-14' coro=<start_trading() running at C:\Users\Sto
 2025-02-26 19:25:03,902 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
 2025-02-26 19:34:13,668 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
 2025-02-26 19:34:13,669 - telegram.ext.Application - INFO - Application.stop() complete
+2025-04-11 11:03:14,443 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-04-11 11:03:14,446 - config.logging_config - INFO - Бот успешно запущен!
+2025-04-11 11:03:21,338 - config.logging_config - ERROR - Критическая ошибка при запуске бота: Timed out
+2025-04-11 11:07:16,444 - config.logging_config - INFO - База данных успешно инициализирована.
+2025-04-11 11:07:16,445 - config.logging_config - INFO - Бот успешно запущен!
+2025-04-11 11:07:18,010 - telegram.ext.Application - INFO - Application started
+2025-04-11 11:07:18,204 - config.logging_config - INFO - Команда /start вызвана пользователем 810668767
+2025-04-11 11:07:18,234 - config.logging_config - INFO - API-ключи успешно загружены для пользователя 810668767.
+2025-04-11 11:07:18,234 - config.logging_config - INFO - Параметры успешно загружены для пользователя 810668767.
+2025-04-11 11:07:55,580 - config.logging_config - INFO - Команда /set_api_keys вызвана пользователем 810668767
+2025-04-11 11:07:55,591 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-04-11 11:07:55,591 - config.logging_config - INFO - API-ключи успешно сохранены для пользователя 810668767.
+2025-04-11 11:07:58,431 - config.logging_config - INFO - Команда /balance вызвана пользователем 810668767
+2025-04-11 11:08:02,494 - config.logging_config - INFO - Полный ответ fetch_balance() для пользователя 810668767: {'info': {'makerCommission': None, 'takerCommission': None, 'buyerCommission': None, 'sellerCommission': None, 'canTrade': True, 'canWithdraw': True, 'canDeposit': True, 'updateTime': None, 'accountType': 'SPOT', 'balances': [{'asset': 'USDT', 'free': '30.19254382', 'locked': '0'}, {'asset': 'KAS', 'free': '158.57', 'locked': '0'}], 'permissions': ['SPOT']}, 'USDT': {'free': 30.19254382, 'used': 0.0, 'total': 30.19254382}, 'KAS': {'free': 158.57, 'used': 0.0, 'total': 158.57}, 'free': {'USDT': 30.19254382, 'KAS': 158.57}, 'used': {'USDT': 0.0, 'KAS': 0.0}, 'total': {'USDT': 30.19254382, 'KAS': 158.57}}
+2025-04-11 11:08:20,063 - config.logging_config - INFO - Команда /set_params вызвана пользователем 810668767
+2025-04-11 11:09:02,900 - config.logging_config - INFO - Команда /set_params вызвана пользователем 810668767
+2025-04-11 11:09:02,910 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-04-11 11:09:02,910 - config.logging_config - INFO - Параметры успешно сохранены для пользователя 810668767.
+2025-04-11 11:11:57,603 - config.logging_config - INFO - Команда /autobuy вызвана пользователем 810668767
+2025-04-11 11:11:57,604 - app.trading_logic - INFO - ========== НАЧАЛО АВТОТОРГОВЛИ ==========
+2025-04-11 11:11:57,605 - app.trading_logic - INFO - Автоторговля запущена для пользователя 810668767, символ KAS/USDT
+2025-04-11 11:11:57,854 - app.trading_logic - WARNING - Автоторговля уже запущена для пользователя 810668767
+2025-04-11 11:11:57,945 - app.trading_logic - INFO - Контекст пользователя получен успешно
+2025-04-11 11:11:58,174 - app.trading_logic - INFO - Параметры пользователя 810668767:
+2025-04-11 11:11:58,174 - app.trading_logic - INFO - - Прибыль: 0.5%
+2025-04-11 11:11:58,175 - app.trading_logic - INFO - - Падение: 0.5%
+2025-04-11 11:11:58,175 - app.trading_logic - INFO - - Задержка: 60с
+2025-04-11 11:11:58,175 - app.trading_logic - INFO - - Размер ордера: 5.0 USDT
+2025-04-11 11:12:03,417 - app.trading_logic - INFO - Баланс USDT: 30.19254382
+2025-04-11 11:12:04,096 - app.trading_logic - INFO - Покупка: 67.02 по 0.0783
+2025-04-11 11:12:04,599 - app.trading_logic - ERROR - Ошибка при покупке: unsupported operand type(s) for -: 'str' and 'float'
+2025-04-11 11:12:15,401 - app.trading_logic - INFO - Покупка: 67.01 по 0.078284
+2025-04-11 11:12:15,998 - app.trading_logic - ERROR - Ошибка при покупке: unsupported operand type(s) for -: 'str' and 'float'
+2025-04-11 11:12:20,941 - config.logging_config - INFO - Команда /stop вызвана пользователем 810668767
+2025-04-11 11:12:26,427 - app.trading_logic - INFO - ========== КОНЕЦ АВТОТОРГОВЛИ ==========
+2025-04-11 11:13:29,521 - config.logging_config - INFO - Команда /balance вызвана пользователем 810668767
+2025-04-11 11:13:34,148 - config.logging_config - INFO - Полный ответ fetch_balance() для пользователя 810668767: {'info': {'makerCommission': None, 'takerCommission': None, 'buyerCommission': None, 'sellerCommission': None, 'canTrade': True, 'canWithdraw': True, 'canDeposit': True, 'updateTime': None, 'accountType': 'SPOT', 'balances': [{'asset': 'USDT', 'free': '20.19437465', 'locked': '0'}, {'asset': 'KAS', 'free': '158.57', 'locked': '134.03'}], 'permissions': ['SPOT']}, 'USDT': {'free': 20.19437465, 'used': 0.0, 'total': 20.19437465}, 'KAS': {'free': 158.57, 'used': 134.03, 'total': 292.6}, 'free': {'USDT': 20.19437465, 'KAS': 158.57}, 'used': {'USDT': 0.0, 'KAS': 134.03}, 'total': {'USDT': 20.19437465, 'KAS': 292.6}}
+2025-04-11 11:20:15,772 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2025-04-11 11:20:15,772 - telegram.ext.Application - INFO - Application.stop() complete
