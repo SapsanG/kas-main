@@ -1,14 +1,14 @@
-# app/main.py
-
 import os
 import sys
 import asyncio
 import logging
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 from telegram import Update
+
 # Добавляем корневую директорию проекта в sys.path
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, PROJECT_ROOT)
+
 # Абсолютные импорты
 from config.config import TOKEN, DATABASE_URL, ADMIN_ID
 from app.database import init_db, db_session  # Инициализация базы данных
@@ -84,8 +84,12 @@ if __name__ == '__main__':
         logger.error(error_message)
         asyncio.run(send_error_notification(error_message))
     finally:
-        # Закрываем сессию базы данных
-        if db_session:
-            db_session.close()
-            logger.info("Сессия базы данных закрыта.")
+        # Корректное закрытие сессии базы данных
+        if 'db_session' in globals():
+            try:
+                db_session.remove()  # Для scoped_session
+                logger.info("Сессии базы данных очищены.")
+            except AttributeError:
+                logger.warning("Сессия базы данных уже закрыта или не инициализирована.")
+        
         logger.info("Завершение работы бота...")
